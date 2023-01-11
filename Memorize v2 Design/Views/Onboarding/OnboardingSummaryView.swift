@@ -17,11 +17,6 @@ struct OnboardingSummaryView: View {
                 
                 Text("Happy Studying!")
                     .font(.memorizeTitle)
-                
-                Button("Reset") {
-                    vm.currentPhase = .start
-                }
-                
             }
             .padding()
         }

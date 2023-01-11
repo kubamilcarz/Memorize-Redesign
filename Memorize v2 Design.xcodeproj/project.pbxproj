@@ -47,6 +47,9 @@
 		C8E05053296EF199005DA8E4 /* MemorizeAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E05052296EF199005DA8E4 /* MemorizeAvatar.swift */; };
 		C8E05056296EF5C3005DA8E4 /* OnboardingAvatarPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E05055296EF5C3005DA8E4 /* OnboardingAvatarPicker.swift */; };
 		C8E05058296EF7FB005DA8E4 /* View+Hide.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E05057296EF7FB005DA8E4 /* View+Hide.swift */; };
+		C8E0505A296F3995005DA8E4 /* OnboardingTourCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E05059296F3995005DA8E4 /* OnboardingTourCell.swift */; };
+		C8E0505C296F39B8005DA8E4 /* TourCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E0505B296F39B8005DA8E4 /* TourCell.swift */; };
+		C8E0505E296F46E5005DA8E4 /* DecksLayoutList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E0505D296F46E5005DA8E4 /* DecksLayoutList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,6 +95,9 @@
 		C8E05052296EF199005DA8E4 /* MemorizeAvatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemorizeAvatar.swift; sourceTree = "<group>"; };
 		C8E05055296EF5C3005DA8E4 /* OnboardingAvatarPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingAvatarPicker.swift; sourceTree = "<group>"; };
 		C8E05057296EF7FB005DA8E4 /* View+Hide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Hide.swift"; sourceTree = "<group>"; };
+		C8E05059296F3995005DA8E4 /* OnboardingTourCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingTourCell.swift; sourceTree = "<group>"; };
+		C8E0505B296F39B8005DA8E4 /* TourCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourCell.swift; sourceTree = "<group>"; };
+		C8E0505D296F46E5005DA8E4 /* DecksLayoutList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecksLayoutList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +191,7 @@
 			children = (
 				C8E05001296EDD2B005DA8E4 /* MemorizeTab.swift */,
 				C8E05046296EEBA5005DA8E4 /* OnboardingPhase.swift */,
+				C8E0505B296F39B8005DA8E4 /* TourCell.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -259,6 +266,7 @@
 		C8E0500A296EDE3E005DA8E4 /* Deck */ = {
 			isa = PBXGroup;
 			children = (
+				C8E0505D296F46E5005DA8E4 /* DecksLayoutList.swift */,
 			);
 			path = Deck;
 			sourceTree = "<group>";
@@ -302,6 +310,7 @@
 			isa = PBXGroup;
 			children = (
 				C8E05055296EF5C3005DA8E4 /* OnboardingAvatarPicker.swift */,
+				C8E05059296F3995005DA8E4 /* OnboardingTourCell.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -401,6 +410,7 @@
 				C8E04FED296EDCB5005DA8E4 /* Memorize_v2_DesignApp.swift in Sources */,
 				C8E0501F296EE5C7005DA8E4 /* MemorizeImage.swift in Sources */,
 				C8E05058296EF7FB005DA8E4 /* View+Hide.swift in Sources */,
+				C8E0505E296F46E5005DA8E4 /* DecksLayoutList.swift in Sources */,
 				C8E05000296EDCFC005DA8E4 /* ContentViewViewModel.swift in Sources */,
 				C8E0504D296EECB4005DA8E4 /* OnboardingTourView.swift in Sources */,
 				C8E05017296EDF02005DA8E4 /* OnboardingRootView.swift in Sources */,
@@ -409,11 +419,13 @@
 				C8E05056296EF5C3005DA8E4 /* OnboardingAvatarPicker.swift in Sources */,
 				C8E0504F296EECC5005DA8E4 /* OnboardingSummaryView.swift in Sources */,
 				C8E05002296EDD2B005DA8E4 /* MemorizeTab.swift in Sources */,
+				C8E0505A296F3995005DA8E4 /* OnboardingTourCell.swift in Sources */,
 				C8E0501B296EE1A9005DA8E4 /* MemorizeBigButton.swift in Sources */,
 				C8E0504B296EECA8005DA8E4 /* OnboardingAskForTourView.swift in Sources */,
 				C8E05045296EEB4F005DA8E4 /* OnboardingHelloView.swift in Sources */,
 				C8E05051296EF0A7005DA8E4 /* OnboardingViewModel.swift in Sources */,
 				C8E05049296EEC9A005DA8E4 /* OnboardingIntroductionView.swift in Sources */,
+				C8E0505C296F39B8005DA8E4 /* TourCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -546,6 +558,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Memorize-v2-Design-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Memorize!";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -576,6 +589,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Memorize-v2-Design-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Memorize!";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

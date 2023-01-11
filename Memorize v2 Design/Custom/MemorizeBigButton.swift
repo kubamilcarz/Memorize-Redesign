@@ -28,10 +28,10 @@ struct MemorizeBigButton: View {
             action()
         } label: {
             Text(title)
-                .font(.memorizeTitle3)
+                .font(.memorizeTitle4)
                 .foregroundColor(.white)
                 .frame(maxWidth: .infinity)
-                .padding()
+                .padding(15)
                 .background(
                     role == .primary ?
                         LinearGradient(colors: [.accentColor, .accentColor.opacity(0.8)], startPoint: .topLeading, endPoint: .bottomTrailing)

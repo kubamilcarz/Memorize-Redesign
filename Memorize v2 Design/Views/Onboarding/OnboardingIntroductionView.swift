@@ -38,6 +38,7 @@ struct OnboardingIntroductionView: View {
                 }
                 .frame(maxWidth: .infinity)
                 .padding(.vertical)
+                .padding(.bottom, 100)
             }
             .onTapGesture {
                 self.hideKeyboard()

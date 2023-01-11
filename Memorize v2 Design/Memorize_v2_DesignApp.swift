@@ -10,6 +10,8 @@ import SwiftUI
 @main
 struct Memorize_v2_DesignApp: App {
     
+    @AppStorage("isOnboardingCompleted") var isOnboardingCompleted = false
+    
     init() {
         UINavigationBar.appearance().largeTitleTextAttributes = [.font: UIFont(descriptor: UIFontDescriptor(name: "Nunito-ExtraBold", size: 32).withSymbolicTraits(.traitBold)!, size: 32)]
         
@@ -19,8 +21,14 @@ struct Memorize_v2_DesignApp: App {
     
     var body: some Scene {
         WindowGroup {
-//            ContentView()
-            OnboardingRootView()
+            if isOnboardingCompleted {
+                ContentView()
+                    .transition(.opacity)
+            } else {
+                OnboardingRootView()
+                    .transition(.opacity)
+            }
         }
+        
     }
 }

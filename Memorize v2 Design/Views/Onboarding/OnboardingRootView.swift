@@ -10,26 +10,29 @@ import SwiftUI
 struct OnboardingRootView: View {
     @StateObject var vm = ViewModel()
     
+    @AppStorage("isOnboardingCompleted") var isOnboardingCompleted = false
+    
     var body: some View {
         VStack {
             switch vm.currentPhase {
             case .start:
                 OnboardingHelloView()
-                    .transition(.asymmetric(insertion: .push(from: .trailing), removal: .push(from: .leading)))
+                    .transition(.asymmetric(insertion: .move(edge: .trailing), removal: .move(edge: .leading)))
             case .introduction:
                 OnboardingIntroductionView()
-                    .transition(.asymmetric(insertion: .push(from: .trailing), removal: .push(from: .leading)))
+                    .transition(.asymmetric(insertion: .move(edge: .trailing), removal: .move(edge: .leading)))
             case .askForTour:
                 OnboardingAskForTourView()
-                    .transition(.asymmetric(insertion: .push(from: .trailing), removal: .push(from: .leading)))
+                    .transition(.asymmetric(insertion: .move(edge: .trailing), removal: .move(edge: .leading)))
             case .tour:
                 OnboardingTourView()
-                    .transition(.asymmetric(insertion: .push(from: .trailing), removal: .push(from: .leading)))
+                    .transition(.asymmetric(insertion: .move(edge: .trailing), removal: .move(edge: .leading)))
             case .end:
                 OnboardingSummaryView()
-                    .transition(.asymmetric(insertion: .push(from: .trailing), removal: .push(from: .leading)))
+                    .transition(.asymmetric(insertion: .move(edge: .trailing), removal: .move(edge: .leading)))
             }
         }
+        
         .environmentObject(vm)
         .withFloatingActionButtons {
             VStack {
@@ -62,11 +65,19 @@ struct OnboardingRootView: View {
                     }
                 case .tour:
                     VStack {
-                        
+                        if vm.currentTourPage == .seven {
+                            MemorizeBigButton("Finish Tour") {
+                                withAnimation(.easeInOut(duration: 0.3)) {
+                                    vm.currentPhase = .end
+                                }
+                            }
+                        }
                     }
                 case .end:
                     MemorizeBigButton("Finish") {
-                        
+                        withAnimation(.easeInOut(duration: 2)) {
+                            isOnboardingCompleted = true
+                        }
                     }
                 }
             }
