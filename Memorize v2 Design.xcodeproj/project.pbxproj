@@ -1,0 +1,621 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C8E04FED296EDCB5005DA8E4 /* Memorize_v2_DesignApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E04FEC296EDCB5005DA8E4 /* Memorize_v2_DesignApp.swift */; };
+		C8E04FEF296EDCB5005DA8E4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E04FEE296EDCB5005DA8E4 /* ContentView.swift */; };
+		C8E04FF1296EDCB6005DA8E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8E04FF0296EDCB6005DA8E4 /* Assets.xcassets */; };
+		C8E04FF4296EDCB6005DA8E4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8E04FF3296EDCB6005DA8E4 /* Preview Assets.xcassets */; };
+		C8E05000296EDCFC005DA8E4 /* ContentViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E04FFF296EDCFC005DA8E4 /* ContentViewViewModel.swift */; };
+		C8E05002296EDD2B005DA8E4 /* MemorizeTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E05001296EDD2B005DA8E4 /* MemorizeTab.swift */; };
+		C8E0500E296EDE5A005DA8E4 /* DecksRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E0500D296EDE5A005DA8E4 /* DecksRootView.swift */; };
+		C8E05010296EDE64005DA8E4 /* BrowseRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E0500F296EDE64005DA8E4 /* BrowseRootView.swift */; };
+		C8E05012296EDE6A005DA8E4 /* SettingsRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E05011296EDE6A005DA8E4 /* SettingsRootView.swift */; };
+		C8E05014296EDE7D005DA8E4 /* QuickReviewRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E05013296EDE7D005DA8E4 /* QuickReviewRootView.swift */; };
+		C8E05017296EDF02005DA8E4 /* OnboardingRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E05016296EDF02005DA8E4 /* OnboardingRootView.swift */; };
+		C8E05019296EDF43005DA8E4 /* WithFloatingActionButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E05018296EDF43005DA8E4 /* WithFloatingActionButtons.swift */; };
+		C8E0501B296EE1A9005DA8E4 /* MemorizeBigButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E0501A296EE1A9005DA8E4 /* MemorizeBigButton.swift */; };
+		C8E0501D296EE4B5005DA8E4 /* MemorizeGraphics.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E0501C296EE4B5005DA8E4 /* MemorizeGraphics.swift */; };
+		C8E0501F296EE5C7005DA8E4 /* MemorizeImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E0501E296EE5C7005DA8E4 /* MemorizeImage.swift */; };
+		C8E05030296EE7B0005DA8E4 /* Nunito-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C8E05020296EE7AF005DA8E4 /* Nunito-Regular.ttf */; };
+		C8E05031296EE7B0005DA8E4 /* Nunito-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C8E05021296EE7AF005DA8E4 /* Nunito-Light.ttf */; };
+		C8E05032296EE7B0005DA8E4 /* Nunito-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C8E05022296EE7AF005DA8E4 /* Nunito-BoldItalic.ttf */; };
+		C8E05033296EE7B0005DA8E4 /* Nunito-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C8E05023296EE7AF005DA8E4 /* Nunito-ExtraBold.ttf */; };
+		C8E05034296EE7B0005DA8E4 /* Nunito-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C8E05024296EE7AF005DA8E4 /* Nunito-Medium.ttf */; };
+		C8E05035296EE7B0005DA8E4 /* Nunito-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C8E05025296EE7AF005DA8E4 /* Nunito-Italic.ttf */; };
+		C8E05036296EE7B0005DA8E4 /* Nunito-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C8E05026296EE7AF005DA8E4 /* Nunito-Bold.ttf */; };
+		C8E05037296EE7B0005DA8E4 /* Nunito-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C8E05027296EE7AF005DA8E4 /* Nunito-BlackItalic.ttf */; };
+		C8E05038296EE7B0005DA8E4 /* Nunito-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C8E05028296EE7AF005DA8E4 /* Nunito-SemiBold.ttf */; };
+		C8E05039296EE7B0005DA8E4 /* Nunito-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C8E05029296EE7AF005DA8E4 /* Nunito-ExtraBoldItalic.ttf */; };
+		C8E0503B296EE7B0005DA8E4 /* Nunito-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C8E0502B296EE7AF005DA8E4 /* Nunito-Black.ttf */; };
+		C8E0503C296EE7B0005DA8E4 /* Nunito-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C8E0502C296EE7B0005DA8E4 /* Nunito-SemiBoldItalic.ttf */; };
+		C8E0503D296EE7B0005DA8E4 /* Nunito-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C8E0502D296EE7B0005DA8E4 /* Nunito-MediumItalic.ttf */; };
+		C8E0503F296EE7B0005DA8E4 /* Nunito-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C8E0502F296EE7B0005DA8E4 /* Nunito-LightItalic.ttf */; };
+		C8E05043296EE94B005DA8E4 /* Font+MemorizeFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E05042296EE94B005DA8E4 /* Font+MemorizeFonts.swift */; };
+		C8E05045296EEB4F005DA8E4 /* OnboardingHelloView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E05044296EEB4F005DA8E4 /* OnboardingHelloView.swift */; };
+		C8E05047296EEBA5005DA8E4 /* OnboardingPhase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E05046296EEBA5005DA8E4 /* OnboardingPhase.swift */; };
+		C8E05049296EEC9A005DA8E4 /* OnboardingIntroductionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E05048296EEC9A005DA8E4 /* OnboardingIntroductionView.swift */; };
+		C8E0504B296EECA8005DA8E4 /* OnboardingAskForTourView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E0504A296EECA8005DA8E4 /* OnboardingAskForTourView.swift */; };
+		C8E0504D296EECB4005DA8E4 /* OnboardingTourView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E0504C296EECB4005DA8E4 /* OnboardingTourView.swift */; };
+		C8E0504F296EECC5005DA8E4 /* OnboardingSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E0504E296EECC5005DA8E4 /* OnboardingSummaryView.swift */; };
+		C8E05051296EF0A7005DA8E4 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E05050296EF0A7005DA8E4 /* OnboardingViewModel.swift */; };
+		C8E05053296EF199005DA8E4 /* MemorizeAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E05052296EF199005DA8E4 /* MemorizeAvatar.swift */; };
+		C8E05056296EF5C3005DA8E4 /* OnboardingAvatarPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E05055296EF5C3005DA8E4 /* OnboardingAvatarPicker.swift */; };
+		C8E05058296EF7FB005DA8E4 /* View+Hide.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E05057296EF7FB005DA8E4 /* View+Hide.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C8E04FE9296EDCB5005DA8E4 /* Memorize v2 Design.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Memorize v2 Design.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8E04FEC296EDCB5005DA8E4 /* Memorize_v2_DesignApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memorize_v2_DesignApp.swift; sourceTree = "<group>"; };
+		C8E04FEE296EDCB5005DA8E4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C8E04FF0296EDCB6005DA8E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C8E04FF3296EDCB6005DA8E4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C8E04FFF296EDCFC005DA8E4 /* ContentViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewViewModel.swift; sourceTree = "<group>"; };
+		C8E05001296EDD2B005DA8E4 /* MemorizeTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemorizeTab.swift; sourceTree = "<group>"; };
+		C8E0500D296EDE5A005DA8E4 /* DecksRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecksRootView.swift; sourceTree = "<group>"; };
+		C8E0500F296EDE64005DA8E4 /* BrowseRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseRootView.swift; sourceTree = "<group>"; };
+		C8E05011296EDE6A005DA8E4 /* SettingsRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRootView.swift; sourceTree = "<group>"; };
+		C8E05013296EDE7D005DA8E4 /* QuickReviewRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickReviewRootView.swift; sourceTree = "<group>"; };
+		C8E05016296EDF02005DA8E4 /* OnboardingRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingRootView.swift; sourceTree = "<group>"; };
+		C8E05018296EDF43005DA8E4 /* WithFloatingActionButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithFloatingActionButtons.swift; sourceTree = "<group>"; };
+		C8E0501A296EE1A9005DA8E4 /* MemorizeBigButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemorizeBigButton.swift; sourceTree = "<group>"; };
+		C8E0501C296EE4B5005DA8E4 /* MemorizeGraphics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemorizeGraphics.swift; sourceTree = "<group>"; };
+		C8E0501E296EE5C7005DA8E4 /* MemorizeImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemorizeImage.swift; sourceTree = "<group>"; };
+		C8E05020296EE7AF005DA8E4 /* Nunito-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Regular.ttf"; sourceTree = "<group>"; };
+		C8E05021296EE7AF005DA8E4 /* Nunito-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Light.ttf"; sourceTree = "<group>"; };
+		C8E05022296EE7AF005DA8E4 /* Nunito-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-BoldItalic.ttf"; sourceTree = "<group>"; };
+		C8E05023296EE7AF005DA8E4 /* Nunito-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-ExtraBold.ttf"; sourceTree = "<group>"; };
+		C8E05024296EE7AF005DA8E4 /* Nunito-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Medium.ttf"; sourceTree = "<group>"; };
+		C8E05025296EE7AF005DA8E4 /* Nunito-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Italic.ttf"; sourceTree = "<group>"; };
+		C8E05026296EE7AF005DA8E4 /* Nunito-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Bold.ttf"; sourceTree = "<group>"; };
+		C8E05027296EE7AF005DA8E4 /* Nunito-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-BlackItalic.ttf"; sourceTree = "<group>"; };
+		C8E05028296EE7AF005DA8E4 /* Nunito-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-SemiBold.ttf"; sourceTree = "<group>"; };
+		C8E05029296EE7AF005DA8E4 /* Nunito-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		C8E0502B296EE7AF005DA8E4 /* Nunito-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Black.ttf"; sourceTree = "<group>"; };
+		C8E0502C296EE7B0005DA8E4 /* Nunito-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		C8E0502D296EE7B0005DA8E4 /* Nunito-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-MediumItalic.ttf"; sourceTree = "<group>"; };
+		C8E0502F296EE7B0005DA8E4 /* Nunito-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-LightItalic.ttf"; sourceTree = "<group>"; };
+		C8E05041296EE7D8005DA8E4 /* Memorize-v2-Design-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Memorize-v2-Design-Info.plist"; sourceTree = SOURCE_ROOT; };
+		C8E05042296EE94B005DA8E4 /* Font+MemorizeFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+MemorizeFonts.swift"; sourceTree = "<group>"; };
+		C8E05044296EEB4F005DA8E4 /* OnboardingHelloView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingHelloView.swift; sourceTree = "<group>"; };
+		C8E05046296EEBA5005DA8E4 /* OnboardingPhase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPhase.swift; sourceTree = "<group>"; };
+		C8E05048296EEC9A005DA8E4 /* OnboardingIntroductionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingIntroductionView.swift; sourceTree = "<group>"; };
+		C8E0504A296EECA8005DA8E4 /* OnboardingAskForTourView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingAskForTourView.swift; sourceTree = "<group>"; };
+		C8E0504C296EECB4005DA8E4 /* OnboardingTourView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingTourView.swift; sourceTree = "<group>"; };
+		C8E0504E296EECC5005DA8E4 /* OnboardingSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSummaryView.swift; sourceTree = "<group>"; };
+		C8E05050296EF0A7005DA8E4 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
+		C8E05052296EF199005DA8E4 /* MemorizeAvatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemorizeAvatar.swift; sourceTree = "<group>"; };
+		C8E05055296EF5C3005DA8E4 /* OnboardingAvatarPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingAvatarPicker.swift; sourceTree = "<group>"; };
+		C8E05057296EF7FB005DA8E4 /* View+Hide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Hide.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C8E04FE6296EDCB5005DA8E4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C8E04FE0296EDCB5005DA8E4 = {
+			isa = PBXGroup;
+			children = (
+				C8E04FEB296EDCB5005DA8E4 /* Memorize v2 Design */,
+				C8E04FEA296EDCB5005DA8E4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C8E04FEA296EDCB5005DA8E4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C8E04FE9296EDCB5005DA8E4 /* Memorize v2 Design.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C8E04FEB296EDCB5005DA8E4 /* Memorize v2 Design */ = {
+			isa = PBXGroup;
+			children = (
+				C8E05041296EE7D8005DA8E4 /* Memorize-v2-Design-Info.plist */,
+				C8E05040296EE7BE005DA8E4 /* Nunito */,
+				C8E04FFE296EDCE7005DA8E4 /* ViewModel */,
+				C8E04FFD296EDCE2005DA8E4 /* Model */,
+				C8E04FFC296EDCDC005DA8E4 /* Extensions */,
+				C8E04FFB296EDCD4005DA8E4 /* Custom */,
+				C8E04FFA296EDCCB005DA8E4 /* Views */,
+				C8E04FEC296EDCB5005DA8E4 /* Memorize_v2_DesignApp.swift */,
+				C8E04FF0296EDCB6005DA8E4 /* Assets.xcassets */,
+				C8E04FF2296EDCB6005DA8E4 /* Preview Content */,
+			);
+			path = "Memorize v2 Design";
+			sourceTree = "<group>";
+		};
+		C8E04FF2296EDCB6005DA8E4 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				C8E04FF3296EDCB6005DA8E4 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C8E04FFA296EDCCB005DA8E4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C8E04FEE296EDCB5005DA8E4 /* ContentView.swift */,
+				C8E05015296EDEE6005DA8E4 /* Onboarding */,
+				C8E0500A296EDE3E005DA8E4 /* Deck */,
+				C8E05009296EDE37005DA8E4 /* Card */,
+				C8E05005296EDE0E005DA8E4 /* Review */,
+				C8E05007296EDE18005DA8E4 /* Pages */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C8E04FFB296EDCD4005DA8E4 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				C8E05018296EDF43005DA8E4 /* WithFloatingActionButtons.swift */,
+				C8E0501A296EE1A9005DA8E4 /* MemorizeBigButton.swift */,
+				C8E0501E296EE5C7005DA8E4 /* MemorizeImage.swift */,
+				C8E05052296EF199005DA8E4 /* MemorizeAvatar.swift */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
+		C8E04FFC296EDCDC005DA8E4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C8E0501C296EE4B5005DA8E4 /* MemorizeGraphics.swift */,
+				C8E05042296EE94B005DA8E4 /* Font+MemorizeFonts.swift */,
+				C8E05057296EF7FB005DA8E4 /* View+Hide.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C8E04FFD296EDCE2005DA8E4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C8E05001296EDD2B005DA8E4 /* MemorizeTab.swift */,
+				C8E05046296EEBA5005DA8E4 /* OnboardingPhase.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C8E04FFE296EDCE7005DA8E4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C8E04FFF296EDCFC005DA8E4 /* ContentViewViewModel.swift */,
+				C8E05050296EF0A7005DA8E4 /* OnboardingViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C8E05003296EDDFC005DA8E4 /* Decks */ = {
+			isa = PBXGroup;
+			children = (
+				C8E0500D296EDE5A005DA8E4 /* DecksRootView.swift */,
+			);
+			path = Decks;
+			sourceTree = "<group>";
+		};
+		C8E05004296EDE09005DA8E4 /* Browse */ = {
+			isa = PBXGroup;
+			children = (
+				C8E0500F296EDE64005DA8E4 /* BrowseRootView.swift */,
+			);
+			path = Browse;
+			sourceTree = "<group>";
+		};
+		C8E05005296EDE0E005DA8E4 /* Review */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Review;
+			sourceTree = "<group>";
+		};
+		C8E05006296EDE13005DA8E4 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				C8E05011296EDE6A005DA8E4 /* SettingsRootView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		C8E05007296EDE18005DA8E4 /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				C8E05003296EDDFC005DA8E4 /* Decks */,
+				C8E05004296EDE09005DA8E4 /* Browse */,
+				C8E05008296EDE21005DA8E4 /* Review */,
+				C8E05006296EDE13005DA8E4 /* Settings */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		C8E05008296EDE21005DA8E4 /* Review */ = {
+			isa = PBXGroup;
+			children = (
+				C8E05013296EDE7D005DA8E4 /* QuickReviewRootView.swift */,
+			);
+			name = Review;
+			path = ../../Review;
+			sourceTree = "<group>";
+		};
+		C8E05009296EDE37005DA8E4 /* Card */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Card;
+			sourceTree = "<group>";
+		};
+		C8E0500A296EDE3E005DA8E4 /* Deck */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Deck;
+			sourceTree = "<group>";
+		};
+		C8E05015296EDEE6005DA8E4 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				C8E05054296EF5B8005DA8E4 /* Components */,
+				C8E05016296EDF02005DA8E4 /* OnboardingRootView.swift */,
+				C8E05044296EEB4F005DA8E4 /* OnboardingHelloView.swift */,
+				C8E05048296EEC9A005DA8E4 /* OnboardingIntroductionView.swift */,
+				C8E0504A296EECA8005DA8E4 /* OnboardingAskForTourView.swift */,
+				C8E0504C296EECB4005DA8E4 /* OnboardingTourView.swift */,
+				C8E0504E296EECC5005DA8E4 /* OnboardingSummaryView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		C8E05040296EE7BE005DA8E4 /* Nunito */ = {
+			isa = PBXGroup;
+			children = (
+				C8E05026296EE7AF005DA8E4 /* Nunito-Bold.ttf */,
+				C8E05022296EE7AF005DA8E4 /* Nunito-BoldItalic.ttf */,
+				C8E05023296EE7AF005DA8E4 /* Nunito-ExtraBold.ttf */,
+				C8E05029296EE7AF005DA8E4 /* Nunito-ExtraBoldItalic.ttf */,
+				C8E05025296EE7AF005DA8E4 /* Nunito-Italic.ttf */,
+				C8E05021296EE7AF005DA8E4 /* Nunito-Light.ttf */,
+				C8E0502F296EE7B0005DA8E4 /* Nunito-LightItalic.ttf */,
+				C8E05024296EE7AF005DA8E4 /* Nunito-Medium.ttf */,
+				C8E0502D296EE7B0005DA8E4 /* Nunito-MediumItalic.ttf */,
+				C8E05020296EE7AF005DA8E4 /* Nunito-Regular.ttf */,
+				C8E05028296EE7AF005DA8E4 /* Nunito-SemiBold.ttf */,
+				C8E0502C296EE7B0005DA8E4 /* Nunito-SemiBoldItalic.ttf */,
+				C8E0502B296EE7AF005DA8E4 /* Nunito-Black.ttf */,
+				C8E05027296EE7AF005DA8E4 /* Nunito-BlackItalic.ttf */,
+			);
+			path = Nunito;
+			sourceTree = "<group>";
+		};
+		C8E05054296EF5B8005DA8E4 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				C8E05055296EF5C3005DA8E4 /* OnboardingAvatarPicker.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C8E04FE8296EDCB5005DA8E4 /* Memorize v2 Design */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C8E04FF7296EDCB6005DA8E4 /* Build configuration list for PBXNativeTarget "Memorize v2 Design" */;
+			buildPhases = (
+				C8E04FE5296EDCB5005DA8E4 /* Sources */,
+				C8E04FE6296EDCB5005DA8E4 /* Frameworks */,
+				C8E04FE7296EDCB5005DA8E4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Memorize v2 Design";
+			productName = "Memorize v2 Design";
+			productReference = C8E04FE9296EDCB5005DA8E4 /* Memorize v2 Design.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C8E04FE1296EDCB5005DA8E4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					C8E04FE8296EDCB5005DA8E4 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = C8E04FE4296EDCB5005DA8E4 /* Build configuration list for PBXProject "Memorize v2 Design" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C8E04FE0296EDCB5005DA8E4;
+			productRefGroup = C8E04FEA296EDCB5005DA8E4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C8E04FE8296EDCB5005DA8E4 /* Memorize v2 Design */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C8E04FE7296EDCB5005DA8E4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8E0503B296EE7B0005DA8E4 /* Nunito-Black.ttf in Resources */,
+				C8E05030296EE7B0005DA8E4 /* Nunito-Regular.ttf in Resources */,
+				C8E0503C296EE7B0005DA8E4 /* Nunito-SemiBoldItalic.ttf in Resources */,
+				C8E0503F296EE7B0005DA8E4 /* Nunito-LightItalic.ttf in Resources */,
+				C8E0503D296EE7B0005DA8E4 /* Nunito-MediumItalic.ttf in Resources */,
+				C8E05032296EE7B0005DA8E4 /* Nunito-BoldItalic.ttf in Resources */,
+				C8E04FF4296EDCB6005DA8E4 /* Preview Assets.xcassets in Resources */,
+				C8E05033296EE7B0005DA8E4 /* Nunito-ExtraBold.ttf in Resources */,
+				C8E05036296EE7B0005DA8E4 /* Nunito-Bold.ttf in Resources */,
+				C8E05038296EE7B0005DA8E4 /* Nunito-SemiBold.ttf in Resources */,
+				C8E05034296EE7B0005DA8E4 /* Nunito-Medium.ttf in Resources */,
+				C8E05035296EE7B0005DA8E4 /* Nunito-Italic.ttf in Resources */,
+				C8E05031296EE7B0005DA8E4 /* Nunito-Light.ttf in Resources */,
+				C8E04FF1296EDCB6005DA8E4 /* Assets.xcassets in Resources */,
+				C8E05037296EE7B0005DA8E4 /* Nunito-BlackItalic.ttf in Resources */,
+				C8E05039296EE7B0005DA8E4 /* Nunito-ExtraBoldItalic.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C8E04FE5296EDCB5005DA8E4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8E05012296EDE6A005DA8E4 /* SettingsRootView.swift in Sources */,
+				C8E05019296EDF43005DA8E4 /* WithFloatingActionButtons.swift in Sources */,
+				C8E0501D296EE4B5005DA8E4 /* MemorizeGraphics.swift in Sources */,
+				C8E04FEF296EDCB5005DA8E4 /* ContentView.swift in Sources */,
+				C8E05047296EEBA5005DA8E4 /* OnboardingPhase.swift in Sources */,
+				C8E05014296EDE7D005DA8E4 /* QuickReviewRootView.swift in Sources */,
+				C8E05053296EF199005DA8E4 /* MemorizeAvatar.swift in Sources */,
+				C8E05043296EE94B005DA8E4 /* Font+MemorizeFonts.swift in Sources */,
+				C8E04FED296EDCB5005DA8E4 /* Memorize_v2_DesignApp.swift in Sources */,
+				C8E0501F296EE5C7005DA8E4 /* MemorizeImage.swift in Sources */,
+				C8E05058296EF7FB005DA8E4 /* View+Hide.swift in Sources */,
+				C8E05000296EDCFC005DA8E4 /* ContentViewViewModel.swift in Sources */,
+				C8E0504D296EECB4005DA8E4 /* OnboardingTourView.swift in Sources */,
+				C8E05017296EDF02005DA8E4 /* OnboardingRootView.swift in Sources */,
+				C8E0500E296EDE5A005DA8E4 /* DecksRootView.swift in Sources */,
+				C8E05010296EDE64005DA8E4 /* BrowseRootView.swift in Sources */,
+				C8E05056296EF5C3005DA8E4 /* OnboardingAvatarPicker.swift in Sources */,
+				C8E0504F296EECC5005DA8E4 /* OnboardingSummaryView.swift in Sources */,
+				C8E05002296EDD2B005DA8E4 /* MemorizeTab.swift in Sources */,
+				C8E0501B296EE1A9005DA8E4 /* MemorizeBigButton.swift in Sources */,
+				C8E0504B296EECA8005DA8E4 /* OnboardingAskForTourView.swift in Sources */,
+				C8E05045296EEB4F005DA8E4 /* OnboardingHelloView.swift in Sources */,
+				C8E05051296EF0A7005DA8E4 /* OnboardingViewModel.swift in Sources */,
+				C8E05049296EEC9A005DA8E4 /* OnboardingIntroductionView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		C8E04FF5296EDCB6005DA8E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C8E04FF6296EDCB6005DA8E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C8E04FF8296EDCB6005DA8E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Memorize v2 Design/Preview Content\"";
+				DEVELOPMENT_TEAM = 7AGNJTPT6V;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Memorize-v2-Design-Info.plist";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kubamilcarz.Memorize-v2-Design";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C8E04FF9296EDCB6005DA8E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Memorize v2 Design/Preview Content\"";
+				DEVELOPMENT_TEAM = 7AGNJTPT6V;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Memorize-v2-Design-Info.plist";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kubamilcarz.Memorize-v2-Design";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C8E04FE4296EDCB5005DA8E4 /* Build configuration list for PBXProject "Memorize v2 Design" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C8E04FF5296EDCB6005DA8E4 /* Debug */,
+				C8E04FF6296EDCB6005DA8E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C8E04FF7296EDCB6005DA8E4 /* Build configuration list for PBXNativeTarget "Memorize v2 Design" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C8E04FF8296EDCB6005DA8E4 /* Debug */,
+				C8E04FF9296EDCB6005DA8E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C8E04FE1296EDCB5005DA8E4 /* Project object */;
+}
