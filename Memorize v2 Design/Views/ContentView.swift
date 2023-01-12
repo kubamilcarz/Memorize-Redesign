@@ -16,19 +16,24 @@ struct ContentView: View {
                 .tabItem {
                     Label("Decks", systemImage: "square.stack")
                 }
+                .tag(MemorizeTab.decks)
             BrowseRootView()
                 .tabItem {
                     Label("Browse", systemImage: "magnifyingglass")
                 }
+                .tag(MemorizeTab.browse)
             QuickReviewRootView()
                 .tabItem {
                     Label("Review", systemImage: "speedometer")
                 }
+                .tag(MemorizeTab.review)
             SettingsRootView()
                 .tabItem {
                     Label("Settings", systemImage: "gear")
                 }
+                .tag(MemorizeTab.settings)
         }
+        .tabViewStyle(.automatic)
     }
 }
 

@@ -8,8 +8,28 @@
 import SwiftUI
 
 struct SettingsRootView: View {
+    
+    @State private var isShowingProfileSheet = false
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            ScrollView {
+                
+            }
+            .navigationTitle("Settings")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button {
+                        isShowingProfileSheet = true
+                    } label: {
+                        Label("Show Profile", systemImage: "person.circle")
+                    }
+                }
+            }
+            .sheet(isPresented: $isShowingProfileSheet) {
+                ProfileSheet()
+            }
+        }
     }
 }
 

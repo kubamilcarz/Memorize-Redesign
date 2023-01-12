@@ -17,4 +17,7 @@ extension Font {
     static let memorizeTitle4: Font = .custom("Nunito-SemiBold", size: 19, relativeTo: .title3)
     
     static let memorizeBody: Font = .custom("Nunito-regular", size: 17, relativeTo: .body)
+    
+    static let memorizeCaption: Font = .custom("Nunito-regular", size: 15, relativeTo: .caption)
+    static let memorizeCaption2: Font = .custom("Nunito-Light", size: 13, relativeTo: .caption2)
 }
