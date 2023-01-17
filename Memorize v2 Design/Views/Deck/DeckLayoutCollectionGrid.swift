@@ -1,5 +1,5 @@
 //
-//  DeckLayoutCollectionGridCell.swift
+//  DeckLayoutCollectionGrid.swift
 //  Memorize v2 Design
 //
 //  Created by Kuba Milcarz on 1/12/23.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct DeckLayoutCollectionGridCell: View {
+struct DeckLayoutCollectionGrid: View {
     @EnvironmentObject var vm: DecksRootView.ViewModel
     
     var collection: DeckGroup
@@ -17,59 +17,20 @@ struct DeckLayoutCollectionGridCell: View {
     }
     
     var body: some View {
-        VStack {
-            VStack(spacing: 0) {
-                HStack {
-                    HStack {
-                        Image(systemName: collection.icon)
-                            .foregroundColor(collection.color)
-                        Text(collection.name)
-                            .lineLimit(1)
-                    }
-                    .font(.memorizeBody)
-                    
-                    Spacer()
-                    
-                    HStack {
-                        Button {
-                            
-                        } label: {
-                            Text("Study All")
-                                .padding(.horizontal, 10)
-                                .padding(.vertical, 3)
-                                .foregroundColor(.white)
-                                .background(Color.accentColor, in: Capsule())
-                        }
-                        .buttonStyle(.plain)
-                        .font(.memorizeCaption2)
-                        
-                        Menu {
-                            
-                        } label: {
-                            Image(systemName: "ellipsis.circle")
-                        }
-                        .tint(.secondary)
-                    }
-                }
-                .padding(.vertical, 10)
-                .padding(.horizontal)
-                
-                Divider()
-            }
-            
-            LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())]) {
-                ForEach(getDecks(decks: collection.decks)) { deck in
+        LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())]) {
+            ForEach(getDecks(decks: collection.decks)) { deck in
+                NavigationLink {
+                    DeckDetailView(deck: deck)
+                } label: {
                     DeckCell(for: deck)
                 }
-                
-                if collection.decks.count > 5 {
-                    DeckCell(isPlaceholder: true)
-                }
+                .buttonStyle(.plain)
             }
-            .padding(.horizontal)
+            
+            if collection.decks.count > 5 {
+                DeckCell(isPlaceholder: true)
+            }
         }
-        .padding(.bottom)
-        .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 12))
     }
     
     private func getDecks(decks: [Deck]) -> [Deck] {
@@ -81,8 +42,8 @@ struct DeckLayoutCollectionGridCell: View {
     }
 }
 
-struct DeckLayoutCollectionGridCell_Previews: PreviewProvider {
+struct DeckLayoutCollectionGrid_Previews: PreviewProvider {
     static var previews: some View {
-        DeckLayoutCollectionGridCell(for: DeckGroup.dummy[2])
+        DeckLayoutCollectionGrid(for: DeckGroup.dummy[2])
     }
 }

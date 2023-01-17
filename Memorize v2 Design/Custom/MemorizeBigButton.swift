@@ -28,7 +28,7 @@ struct MemorizeBigButton: View {
     }
     
     enum MemorizeButtonRole {
-        case primary, secondary, tertiary
+        case primary, secondary, tertiary, quaternary
     }
     
     var body: some View {
@@ -36,23 +36,32 @@ struct MemorizeBigButton: View {
             action()
         } label: {
             Group {
-                if let icon {
-                    Label(title, systemImage: icon)
-                } else {
-                    Text(title)
+                ZStack {
+                    if role == .primary {
+                        LinearGradient(colors: [.accentColor, .accentColor.opacity(0.8)], startPoint: .topLeading, endPoint: .bottomTrailing)
+                    } else if role == .secondary {
+                        LinearGradient(colors: [.secondary, .secondary.opacity(0.7)], startPoint: .topLeading, endPoint: .bottomTrailing)
+                    } else if role == .tertiary {
+                        LinearGradient(colors: [.secondary.opacity(0.8), .secondary.opacity(0.7)], startPoint: .topLeading, endPoint: .bottomTrailing)
+                    }
+                    
+                    if role == .quaternary {
+                        Rectangle().fill(.ultraThinMaterial)
+                    }
+                    
+                    if let icon {
+                        Label(title, systemImage: icon)
+                            .padding(15)
+                    } else {
+                        Text(title)
+                            .padding(15)
+                    }
                 }
+                .font((role == .primary || role == .secondary) ? .memorizeTitle4 : role == .tertiary ? .memorizeBody : .memorizeBody2)
+                .foregroundColor(role != .quaternary ? .white : .primary)
+                .frame(maxWidth: .infinity)
+                .clipShape(RoundedRectangle(cornerRadius: 12))
             }
-            .font(role != .tertiary ? .memorizeTitle4 : .memorizeBody)
-            .foregroundColor(.white)
-            .frame(maxWidth: .infinity)
-            .padding(15)
-            .background(
-                role == .primary ?
-                    LinearGradient(colors: [.accentColor, .accentColor.opacity(0.8)], startPoint: .topLeading, endPoint: .bottomTrailing)
-                : role == .secondary ? LinearGradient(colors: [.secondary, .secondary.opacity(0.7)], startPoint: .topLeading, endPoint: .bottomTrailing)
-                : LinearGradient(colors: [.secondary.opacity(0.8), .secondary.opacity(0.7)], startPoint: .topLeading, endPoint: .bottomTrailing)
-                , in: RoundedRectangle(cornerRadius: 12)
-            )
         }
         .buttonStyle(.plain)
     }

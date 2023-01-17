@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C8DB5D492971779600BD6802 /* MemorizeCapsuleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DB5D482971779600BD6802 /* MemorizeCapsuleButton.swift */; };
+		C8DB5D4B2971788800BD6802 /* DeckSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DB5D4A2971788800BD6802 /* DeckSummaryCell.swift */; };
+		C8DB5D4D29717BD800BD6802 /* DeckSummaryCircularStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DB5D4C29717BD800BD6802 /* DeckSummaryCircularStats.swift */; };
+		C8DB5D4F2971822400BD6802 /* CardsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DB5D4E2971822400BD6802 /* CardsList.swift */; };
+		C8DB5D532972BAC100BD6802 /* NewDeckSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DB5D522972BAC100BD6802 /* NewDeckSheet.swift */; };
 		C8E04FED296EDCB5005DA8E4 /* Memorize_v2_DesignApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E04FEC296EDCB5005DA8E4 /* Memorize_v2_DesignApp.swift */; };
 		C8E04FEF296EDCB5005DA8E4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E04FEE296EDCB5005DA8E4 /* ContentView.swift */; };
 		C8E04FF1296EDCB6005DA8E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8E04FF0296EDCB6005DA8E4 /* Assets.xcassets */; };
@@ -59,9 +64,18 @@
 		C8E0506D29702AF7005DA8E4 /* DeckLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E0506C29702AF7005DA8E4 /* DeckLayout.swift */; };
 		C8E0506F29702B2C005DA8E4 /* DecksRootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E0506E29702B2C005DA8E4 /* DecksRootViewModel.swift */; };
 		C8E0507129703220005DA8E4 /* DeckLayoutCollectionGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E0507029703220005DA8E4 /* DeckLayoutCollectionGrid.swift */; };
+		C8E0507329707B47005DA8E4 /* DeckLayoutListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E0507229707B47005DA8E4 /* DeckLayoutListCell.swift */; };
+		C8E0507529707BF0005DA8E4 /* DeckLayoutColllectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E0507429707BF0005DA8E4 /* DeckLayoutColllectionHeader.swift */; };
+		C8E0507729716616005DA8E4 /* DeckDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E0507629716616005DA8E4 /* DeckDetailView.swift */; };
+		C8E0507929716A13005DA8E4 /* StudySessionModes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E0507829716A12005DA8E4 /* StudySessionModes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C8DB5D482971779600BD6802 /* MemorizeCapsuleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemorizeCapsuleButton.swift; sourceTree = "<group>"; };
+		C8DB5D4A2971788800BD6802 /* DeckSummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckSummaryCell.swift; sourceTree = "<group>"; };
+		C8DB5D4C29717BD800BD6802 /* DeckSummaryCircularStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckSummaryCircularStats.swift; sourceTree = "<group>"; };
+		C8DB5D4E2971822400BD6802 /* CardsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsList.swift; sourceTree = "<group>"; };
+		C8DB5D522972BAC100BD6802 /* NewDeckSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDeckSheet.swift; sourceTree = "<group>"; };
 		C8E04FE9296EDCB5005DA8E4 /* Memorize v2 Design.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Memorize v2 Design.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8E04FEC296EDCB5005DA8E4 /* Memorize_v2_DesignApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memorize_v2_DesignApp.swift; sourceTree = "<group>"; };
 		C8E04FEE296EDCB5005DA8E4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -116,6 +130,10 @@
 		C8E0506C29702AF7005DA8E4 /* DeckLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckLayout.swift; sourceTree = "<group>"; };
 		C8E0506E29702B2C005DA8E4 /* DecksRootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecksRootViewModel.swift; sourceTree = "<group>"; };
 		C8E0507029703220005DA8E4 /* DeckLayoutCollectionGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckLayoutCollectionGrid.swift; sourceTree = "<group>"; };
+		C8E0507229707B47005DA8E4 /* DeckLayoutListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckLayoutListCell.swift; sourceTree = "<group>"; };
+		C8E0507429707BF0005DA8E4 /* DeckLayoutColllectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckLayoutColllectionHeader.swift; sourceTree = "<group>"; };
+		C8E0507629716616005DA8E4 /* DeckDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckDetailView.swift; sourceTree = "<group>"; };
+		C8E0507829716A12005DA8E4 /* StudySessionModes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudySessionModes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +206,7 @@
 			children = (
 				C8E05018296EDF43005DA8E4 /* WithFloatingActionButtons.swift */,
 				C8E0501A296EE1A9005DA8E4 /* MemorizeBigButton.swift */,
+				C8DB5D482971779600BD6802 /* MemorizeCapsuleButton.swift */,
 				C8E0501E296EE5C7005DA8E4 /* MemorizeImage.swift */,
 				C8E05052296EF199005DA8E4 /* MemorizeAvatar.swift */,
 			);
@@ -233,6 +252,8 @@
 			isa = PBXGroup;
 			children = (
 				C8E0500D296EDE5A005DA8E4 /* DecksRootView.swift */,
+				C8E0507629716616005DA8E4 /* DeckDetailView.swift */,
+				C8DB5D522972BAC100BD6802 /* NewDeckSheet.swift */,
 			);
 			path = Decks;
 			sourceTree = "<group>";
@@ -248,6 +269,7 @@
 		C8E05005296EDE0E005DA8E4 /* Review */ = {
 			isa = PBXGroup;
 			children = (
+				C8E0507829716A12005DA8E4 /* StudySessionModes.swift */,
 			);
 			path = Review;
 			sourceTree = "<group>";
@@ -284,6 +306,7 @@
 		C8E05009296EDE37005DA8E4 /* Card */ = {
 			isa = PBXGroup;
 			children = (
+				C8DB5D4E2971822400BD6802 /* CardsList.swift */,
 			);
 			path = Card;
 			sourceTree = "<group>";
@@ -294,6 +317,10 @@
 				C8E0505D296F46E5005DA8E4 /* DecksLayoutList.swift */,
 				C8E05068297023F3005DA8E4 /* DeckCell.swift */,
 				C8E0507029703220005DA8E4 /* DeckLayoutCollectionGrid.swift */,
+				C8E0507229707B47005DA8E4 /* DeckLayoutListCell.swift */,
+				C8E0507429707BF0005DA8E4 /* DeckLayoutColllectionHeader.swift */,
+				C8DB5D4A2971788800BD6802 /* DeckSummaryCell.swift */,
+				C8DB5D4C29717BD800BD6802 /* DeckSummaryCircularStats.swift */,
 			);
 			path = Deck;
 			sourceTree = "<group>";
@@ -430,25 +457,32 @@
 				C8E05012296EDE6A005DA8E4 /* SettingsRootView.swift in Sources */,
 				C8E05019296EDF43005DA8E4 /* WithFloatingActionButtons.swift in Sources */,
 				C8E0501D296EE4B5005DA8E4 /* MemorizeGraphics.swift in Sources */,
+				C8E0507729716616005DA8E4 /* DeckDetailView.swift in Sources */,
 				C8E0506B29702888005DA8E4 /* Color+MemorizeColors.swift in Sources */,
 				C8E04FEF296EDCB5005DA8E4 /* ContentView.swift in Sources */,
 				C8E05047296EEBA5005DA8E4 /* OnboardingPhase.swift in Sources */,
+				C8E0507329707B47005DA8E4 /* DeckLayoutListCell.swift in Sources */,
 				C8E05014296EDE7D005DA8E4 /* QuickReviewRootView.swift in Sources */,
 				C8E05053296EF199005DA8E4 /* MemorizeAvatar.swift in Sources */,
 				C8E050652970213F005DA8E4 /* Card.swift in Sources */,
 				C8E05063297020F0005DA8E4 /* Deck.swift in Sources */,
+				C8DB5D4D29717BD800BD6802 /* DeckSummaryCircularStats.swift in Sources */,
 				C8E05043296EE94B005DA8E4 /* Font+MemorizeFonts.swift in Sources */,
 				C8E0507129703220005DA8E4 /* DeckLayoutCollectionGrid.swift in Sources */,
 				C8E04FED296EDCB5005DA8E4 /* Memorize_v2_DesignApp.swift in Sources */,
+				C8DB5D492971779600BD6802 /* MemorizeCapsuleButton.swift in Sources */,
 				C8E0501F296EE5C7005DA8E4 /* MemorizeImage.swift in Sources */,
 				C8E05058296EF7FB005DA8E4 /* View+Hide.swift in Sources */,
+				C8DB5D4B2971788800BD6802 /* DeckSummaryCell.swift in Sources */,
 				C8E0505E296F46E5005DA8E4 /* DecksLayoutList.swift in Sources */,
 				C8E05000296EDCFC005DA8E4 /* ContentViewViewModel.swift in Sources */,
 				C8E0504D296EECB4005DA8E4 /* OnboardingTourView.swift in Sources */,
 				C8E05017296EDF02005DA8E4 /* OnboardingRootView.swift in Sources */,
 				C8E0500E296EDE5A005DA8E4 /* DecksRootView.swift in Sources */,
+				C8E0507929716A13005DA8E4 /* StudySessionModes.swift in Sources */,
 				C8E05010296EDE64005DA8E4 /* BrowseRootView.swift in Sources */,
 				C8E05056296EF5C3005DA8E4 /* OnboardingAvatarPicker.swift in Sources */,
+				C8E0507529707BF0005DA8E4 /* DeckLayoutColllectionHeader.swift in Sources */,
 				C8E0504F296EECC5005DA8E4 /* OnboardingSummaryView.swift in Sources */,
 				C8E05002296EDD2B005DA8E4 /* MemorizeTab.swift in Sources */,
 				C8E0505A296F3995005DA8E4 /* OnboardingTourCell.swift in Sources */,
@@ -458,10 +492,12 @@
 				C8E050672970218E005DA8E4 /* DeckGroup.swift in Sources */,
 				C8E0506F29702B2C005DA8E4 /* DecksRootViewModel.swift in Sources */,
 				C8E05051296EF0A7005DA8E4 /* OnboardingViewModel.swift in Sources */,
+				C8DB5D4F2971822400BD6802 /* CardsList.swift in Sources */,
 				C8E0506D29702AF7005DA8E4 /* DeckLayout.swift in Sources */,
 				C8E05049296EEC9A005DA8E4 /* OnboardingIntroductionView.swift in Sources */,
 				C8E0505C296F39B8005DA8E4 /* TourCell.swift in Sources */,
 				C8E05060296F4CF6005DA8E4 /* ProfileSheet.swift in Sources */,
+				C8DB5D532972BAC100BD6802 /* NewDeckSheet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

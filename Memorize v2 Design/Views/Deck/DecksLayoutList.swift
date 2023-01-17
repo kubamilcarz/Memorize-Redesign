@@ -13,44 +13,58 @@ struct DecksLayoutList: View {
     var body: some View {
         switch vm.layout {
         case .grid:
-            LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())]) {
+            LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())], spacing: 10) {
                 ForEach(Deck.dummy) { deck in
-                    DeckCell(for: deck)
+                    NavigationLink {
+                        DeckDetailView(deck: deck)
+                    } label: {
+                        DeckCell(for: deck)
+                    }
+                    .buttonStyle(.plain)
                 }
             }
         case .list:
-            VStack {
+            VStack(spacing: 10) {
                 ForEach(Deck.dummy) { deck in
-                    HStack {
-                        Label(deck.name, systemImage: deck.icon)
-                        
-                        Spacer()
+                    NavigationLink {
+                        DeckDetailView(deck: deck)
+                    } label: {
+                        DeckLayoutListCell(for: deck)
                     }
+                    .buttonStyle(.plain)
                 }
             }
         case .collectionList:
-            VStack {
+            VStack(spacing: 10) {
                 ForEach(DeckGroup.dummy) { collection in
-                    VStack {
-                        Label(collection.name, systemImage: collection.icon)
-                        
-                        VStack {
+                    VStack(spacing: 10) {
+                        DeckLayoutColllectionHeader(for: collection)
+
+                        VStack(spacing: 10) {
                             ForEach(collection.decks) { deck in
-                                HStack {
-                                    Label(deck.name, systemImage: deck.name)
-                                    
-                                    Spacer()
+                                NavigationLink {
+                                    DeckDetailView(deck: deck)
+                                } label: {
+                                    DeckLayoutListCell(for: deck)
                                 }
+                                .buttonStyle(.plain)
                             }
                         }
+                        .padding([.horizontal, .bottom], 10)
                     }
                     .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 12))
                 }
             }
         case .collectionGrid:
-            VStack {
+            VStack(spacing: 10) {
                 ForEach(DeckGroup.dummy) { collection in
-                    DeckLayoutCollectionGridCell(for: collection)
+                    VStack(spacing: 10) {
+                        DeckLayoutColllectionHeader(for: collection)
+                        
+                        DeckLayoutCollectionGrid(for: collection)
+                            .padding([.horizontal, .bottom], 10)
+                    }
+                    .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 12))
                 }
             }
         }

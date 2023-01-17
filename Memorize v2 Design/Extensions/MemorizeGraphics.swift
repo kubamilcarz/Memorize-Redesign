@@ -9,10 +9,11 @@ import SwiftUI
 
 enum MemorizeGraphics: String {
     
-    case girlLaptopIdeas = "girlLaptopIdeas"
-    case girlReadingStackBooks = "girlReadingStackBooks"
-    case journeyBeginning = "journeyBeginning"
-    case movingFurniture = "movingFurniture"
-    case podiumFirstCup = "podiumFirstCup"
-    case superhumansFlyingUp = "superhumansFlyingUp"
+    case girlLaptopIdeas
+    case girlReadingStackBooks
+    case journeyBeginning
+    case movingFurniture
+    case podiumFirstCup
+    case superhumansFlyingUp
+    case typewriter
 }

@@ -9,14 +9,43 @@ import SwiftUI
 
 extension Color {
     
-    static let memorizeBlue = Self.init(red: 78/256, green: 164/256, blue: 221/256)
-    static let memorizeMint = Self.init(red: 162/256, green: 214/256, blue: 144/256)
-    static let memorizeNavy = Self.init(red: 70/256, green: 102/256, blue: 149/256)
-    static let memorizePurple = Self.init(red: 146/256, green: 98/256, blue: 225/256)
-    static let memorizeYellow = Self.init(red: 252/256, green: 213/256, blue: 113/256)
-    static let memorizeRed = Self.init(red: 232/256, green: 124/256, blue: 124/256)
-    static let memorizeOrange = Self.init(red: 236/256, green: 146/256, blue: 67/256)
-    static let memorizePink = Self.init(red: 234/256, green: 153/256, blue: 216/256)
-    static let memorizeGreen = Self.init(red: 61/256, green: 175/256, blue: 134/256)
+    // MARK: - Memorize Colors
+    static let memorizeRed = Self.init(hex: "e03524")
+    static let memorizeOrange = Self.init(hex: "f07c12")
+    static let memorizeYellow = Self.init(hex: "f9cb40")
+    static let memorizeGreen = Self.init(hex: "21b534")
+    static let memorizeMint = Self.init(hex: "3bceac")
+    static let memorizeBlue = Self.init(hex: "0077b6")
+    static let memorizeNavy = Self.init(hex: "1f64ad")
+    static let memorizePurple = Self.init(hex: "903498")
     
+    static let memorizePink = Self.init(hex: "e0516d")
+    static let memorizeGray = Self.init(hex: "303036")
+    
+    
+    // MARK: - Hex Extension
+    init(hex: String) {
+        let hex = hex.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
+        var int: UInt64 = 0
+        Scanner(string: hex).scanHexInt64(&int)
+        let a, r, g, b: UInt64
+        switch hex.count {
+        case 3: // RGB (12-bit)
+            (a, r, g, b) = (255, (int >> 8) * 17, (int >> 4 & 0xF) * 17, (int & 0xF) * 17)
+        case 6: // RGB (24-bit)
+            (a, r, g, b) = (255, int >> 16, int >> 8 & 0xFF, int & 0xFF)
+        case 8: // ARGB (32-bit)
+            (a, r, g, b) = (int >> 24, int >> 16 & 0xFF, int >> 8 & 0xFF, int & 0xFF)
+        default:
+            (a, r, g, b) = (1, 1, 1, 0)
+        }
+
+        self.init(
+            .sRGB,
+            red: Double(r) / 255,
+            green: Double(g) / 255,
+            blue:  Double(b) / 255,
+            opacity: Double(a) / 255
+        )
+    }
 }

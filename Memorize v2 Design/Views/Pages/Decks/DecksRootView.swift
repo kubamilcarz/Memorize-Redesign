@@ -14,28 +14,63 @@ struct DecksRootView: View {
     
     var body: some View {
         NavigationView {
-            ScrollView {
-                HStack {
-                    MemorizeBigButton("Custom Study", icon: "play", role: .tertiary) { }
-                    MemorizeBigButton("New Deck", icon: "plus.circle", role: .tertiary) { }
+            GeometryReader { geom in
+                ScrollView {
+                    if Deck.dummy.isEmpty {
+                        VStack {
+                            MemorizeImage(.typewriter, width: 250)
+                            Text("You haven’t created any decks yet. Tap button to create.")
+                                .multilineTextAlignment(.center)
+                                .frame(maxWidth: 250)
+                                .foregroundStyle(.secondary)
+                            
+                            Button {
+                                
+                            } label: {
+                                Label("New Deck", systemImage: "plus.circle")
+                                    .padding(5)
+                            }
+                            .buttonStyle(.borderedProminent)
+                        }
+                        .font(.memorizeBody)
+                        .padding()
+                        .frame(width: geom.size.width, height: geom.size.height)
+                    } else {
+                        VStack(spacing: 10) {
+                            HStack(spacing: 10) {
+                                MemorizeBigButton("Custom Study", icon: "play", role: .quaternary) { }
+                                MemorizeBigButton("New Deck", icon: "plus.circle", role: .quaternary) { vm.isShowingNewDeckSheet = true }
+                            }
+                            .padding(.horizontal)
+                            
+                            DecksLayoutList()
+                                .padding(.horizontal)
+                        }
+                    }
                 }
-                .padding(.horizontal)
-                .padding(.bottom)
-                
-                DecksLayoutList()
-                    .padding(.horizontal)
             }
+            
             .navigationTitle("Decks")
-            .searchable(text: $searchQuery, placement: .toolbar, prompt: Text("Browse Decks"))
+            .searchable(text: $searchQuery, placement: .toolbar, prompt: Text("Browse"))
             
             .toolbar {
-                ToolbarItem(placement: .navigationBarLeading) {
-                    decksSortingMenu
+                if !Deck.dummy.isEmpty {
+                    ToolbarItem(placement: .navigationBarLeading) {
+                        decksSortingMenu
+                    }
+                    
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        decksLayoutMenu
+                    }
                 }
-                
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    decksLayoutMenu
-                }
+            }
+            
+            .sheet(isPresented: $vm.isShowingNewDeckSheet) {
+                NewDeckSheet()
+            }
+            
+            .sheet(item: $vm.editingDeck) { deck in
+                NewDeckSheet(isEdit: true, deck: deck)
             }
         }
         .environmentObject(vm)

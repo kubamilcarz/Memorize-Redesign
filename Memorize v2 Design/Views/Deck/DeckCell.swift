@@ -12,6 +12,17 @@ struct DeckCell: View {
     var deck: Deck?
     var isPlaceholder: Bool
     
+    var title: String?
+    var icon: String?
+    var color: Color?
+    
+    init(withTitle title: String, icon: String, color: Color) {
+        self.title = title
+        self.icon = icon
+        self.color = color
+        self.isPlaceholder = false
+    }
+    
     init(for deck: Deck) {
         self.deck = deck
         self.isPlaceholder = false
@@ -26,8 +37,10 @@ struct DeckCell: View {
             ZStack {
                 if let deck {
                     deck.color.opacity(0.75)
+                } else if let color {
+                    color.opacity(0.75)
                 } else {
-                    Color.secondary.opacity(0.75)
+                    Rectangle().fill(.ultraThinMaterial)
                 }
                 
                 VStack {
@@ -35,6 +48,9 @@ struct DeckCell: View {
                     
                     if let deck {
                         Image(systemName: deck.icon)
+                            .font(.system(size: geo.size.width * 0.25))
+                    } else if let icon {
+                        Image(systemName: icon)
                             .font(.system(size: geo.size.width * 0.25))
                     } else {
                         Image(systemName: "ellipsis")
@@ -47,6 +63,8 @@ struct DeckCell: View {
                         Group {
                             if let deck {
                                 Text(deck.name)
+                            } else if let title {
+                                Text(title)
                             } else {
                                 Text("More")
                             }
@@ -58,7 +76,7 @@ struct DeckCell: View {
                     }
                     .padding(.horizontal, 5)
                 }
-                .foregroundColor(.white.opacity(0.85))
+                .foregroundColor(isPlaceholder ? .secondary : .white.opacity(0.85))
             }
         }
         .clipShape(RoundedRectangle(cornerRadius: 12))
