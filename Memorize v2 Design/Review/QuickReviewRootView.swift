@@ -23,6 +23,7 @@ struct QuickReviewRootView: View {
                 }
             }
         }
+        .pageInfoBar(icon: "speedometer", description: "Review Tab here", isShowing: .constant(true), dismiss: { })
     }
 }
 

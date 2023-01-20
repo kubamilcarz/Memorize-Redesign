@@ -76,6 +76,7 @@ struct DecksRootView: View {
             .sheet(item: $vm.editingDeck) { deck in
                 NewDeckSheet(isEdit: true, deck: deck)
             }
+            .pageInfoBar(icon: "square.stack", description: "Decks Tab Here", isShowing: .constant(true), dismiss: {} )
         }
         .environmentObject(vm)
         

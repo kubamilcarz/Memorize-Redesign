@@ -26,6 +26,8 @@
 		C881C8FD297AE6F700591C74 /* CardDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C881C8FC297AE6F700591C74 /* CardDetailView.swift */; };
 		C881C8FF297AF33200591C74 /* StatsChartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C881C8FE297AF33200591C74 /* StatsChartCell.swift */; };
 		C881C901297AFA2600591C74 /* CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = C881C900297AFA2600591C74 /* CornerRadius.swift */; };
+		C881C903297B026C00591C74 /* SuccessOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = C881C902297B026C00591C74 /* SuccessOverlay.swift */; };
+		C881C905297B04FA00591C74 /* PageInfoBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C881C904297B04FA00591C74 /* PageInfoBar.swift */; };
 		C88E5EE92976BD2B00D82A36 /* MemorizeTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88E5EE82976BD2B00D82A36 /* MemorizeTextFieldStyle.swift */; };
 		C8DB5D492971779600BD6802 /* MemorizeCapsuleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DB5D482971779600BD6802 /* MemorizeCapsuleButton.swift */; };
 		C8DB5D4B2971788800BD6802 /* DeckSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DB5D4A2971788800BD6802 /* DeckSummaryCell.swift */; };
@@ -109,6 +111,8 @@
 		C881C8FC297AE6F700591C74 /* CardDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailView.swift; sourceTree = "<group>"; };
 		C881C8FE297AF33200591C74 /* StatsChartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsChartCell.swift; sourceTree = "<group>"; };
 		C881C900297AFA2600591C74 /* CornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerRadius.swift; sourceTree = "<group>"; };
+		C881C902297B026C00591C74 /* SuccessOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessOverlay.swift; sourceTree = "<group>"; };
+		C881C904297B04FA00591C74 /* PageInfoBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageInfoBar.swift; sourceTree = "<group>"; };
 		C88E5EE82976BD2B00D82A36 /* MemorizeTextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemorizeTextFieldStyle.swift; sourceTree = "<group>"; };
 		C8DB5D482971779600BD6802 /* MemorizeCapsuleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemorizeCapsuleButton.swift; sourceTree = "<group>"; };
 		C8DB5D4A2971788800BD6802 /* DeckSummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckSummaryCell.swift; sourceTree = "<group>"; };
@@ -279,6 +283,8 @@
 				C8E05052296EF199005DA8E4 /* MemorizeAvatar.swift */,
 				C881C8EB297AA28800591C74 /* DisableScrolling.swift */,
 				C881C8ED297AA42300591C74 /* NotFoundOverlay.swift */,
+				C881C902297B026C00591C74 /* SuccessOverlay.swift */,
+				C881C904297B04FA00591C74 /* PageInfoBar.swift */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -567,6 +573,7 @@
 				C8E0501F296EE5C7005DA8E4 /* MemorizeImage.swift in Sources */,
 				C8E05058296EF7FB005DA8E4 /* View+Hide.swift in Sources */,
 				C8DB5D4B2971788800BD6802 /* DeckSummaryCell.swift in Sources */,
+				C881C903297B026C00591C74 /* SuccessOverlay.swift in Sources */,
 				C8E0505E296F46E5005DA8E4 /* DecksLayoutList.swift in Sources */,
 				C8E05000296EDCFC005DA8E4 /* ContentViewViewModel.swift in Sources */,
 				C881C8F9297ADA1B00591C74 /* BrowseViewViewModel.swift in Sources */,
@@ -585,6 +592,7 @@
 				C8E0501B296EE1A9005DA8E4 /* MemorizeBigButton.swift in Sources */,
 				C8E0504B296EECA8005DA8E4 /* OnboardingAskForTourView.swift in Sources */,
 				C8E05045296EEB4F005DA8E4 /* OnboardingHelloView.swift in Sources */,
+				C881C905297B04FA00591C74 /* PageInfoBar.swift in Sources */,
 				C881C8DA2979E7F200591C74 /* CollectionDetailView.swift in Sources */,
 				C8E050672970218E005DA8E4 /* DeckGroup.swift in Sources */,
 				C881C8F5297AC61E00591C74 /* MemorizeTabBarContainerView.swift in Sources */,

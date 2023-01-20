@@ -32,6 +32,8 @@ extension NewCardView {
         @Published var canvasView = PKCanvasView()
         @Published var isCanvasToolkitActive = false
         
+        @Published var isShowingSuccess = false
+        
         var isFormDisabled: Bool { front.isEmpty || back.isEmpty }
         
         init() {

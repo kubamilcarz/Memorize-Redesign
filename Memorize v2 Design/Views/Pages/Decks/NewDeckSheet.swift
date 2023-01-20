@@ -26,6 +26,7 @@ struct NewDeckSheet: View {
     @State private var description = ""
     @State private var pickedIcon = "house"
     @State private var pickedColor = Color.memorizeBlue
+    @State private var isShowingSuccess = false
     
     var formDisabled: Bool {
         title.count < 2 || pickedIcon.isEmpty
@@ -136,10 +137,20 @@ struct NewDeckSheet: View {
                 .padding(.bottom, 75)
             }
             .withFloatingActionButtons {
-                MemorizeBigButton(isEdit ? "Save" : "Add") { }
-                    .padding(.horizontal)
-                    .disabled(formDisabled)
+                MemorizeBigButton(isEdit ? "Save" : "Add") {
+                    if !isEdit {
+                        isShowingSuccess = true
+
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 2.1) {
+                            dismiss()
+                        }
+                    }
+                }
+                .padding(.horizontal)
+                .disabled(formDisabled)
             }
+            
+            .withSuccessOverlay("Added Deck", animated: $isShowingSuccess)
             
             .navigationTitle(isEdit ? title : "New Deck")
             .navigationBarTitleDisplayMode(.inline)

@@ -29,6 +29,7 @@ struct SettingsRootView: View {
             .sheet(isPresented: $isShowingProfileSheet) {
                 ProfileSheet()
             }
+            .pageInfoBar(icon: "gear", description: "Settings Tab here", isShowing: .constant(true), dismiss: { })
         }
     }
 }

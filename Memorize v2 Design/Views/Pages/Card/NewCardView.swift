@@ -156,12 +156,16 @@ struct NewCardView: View {
                         vm.saveCard(card: card)
                     } else {
                         vm.addCard()
+
+                        vm.isShowingSuccess = true
                     }
                 }
                 .padding(.horizontal)
                 .disabled(vm.isFormDisabled)
             }
         }
+        
+        .withSuccessOverlay("Card Added", animated: $vm.isShowingSuccess)
         
         .onTapGesture {
             UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)

@@ -29,6 +29,7 @@ struct BrowseRootView: View {
             .navigationTitle("Browse")
 
             .searchable(text: $vm.searchQuery, placement: .navigationBarDrawer(displayMode: .automatic), prompt: Text("Search"))
+            .pageInfoBar(icon: "magnifyingglass", description: "Browse Tab here", isShowing: .constant(true), dismiss: { })
         }
     }
 }
