@@ -8,8 +8,21 @@
 import SwiftUI
 
 struct QuickReviewRootView: View {
+    @EnvironmentObject var contentVM: ContentView.ViewModel
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ScrollView {
+            
+        }
+        .onChange(of: contentVM.currentTab) { newTab in
+            if newTab == .review {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                    withAnimation(.interpolatingSpring(stiffness: 200, damping: 25)) {
+                        contentVM.tabBarCollapseLevel = .high
+                    }
+                }
+            }
+        }
     }
 }
 

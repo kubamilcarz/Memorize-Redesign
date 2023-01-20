@@ -35,33 +35,46 @@ struct NotFoundOverlayContainer: ViewModifier {
             if isActive {
                 Rectangle().fill(.ultraThinMaterial).ignoresSafeArea()
                 
-                VStack(spacing: 5) {
-                    MemorizeImage(.catalog, width: 200)
-                        .padding(.bottom, 10)
-                    
-                    Text(title)
-                        .font(.memorizeTitle3)
-                    
-                    Text(message)
-                        .font(.memorizeCaption)
-                        .foregroundColor(.secondary)
-                        .multilineTextAlignment(.center)
-                    
-                    Button(action: { dismiss() }) {
-                        Label("Go Back", systemImage: "arrow.left")
-                            .font(.memorizeCaption)
+                GeometryReader { geom in
+                    ScrollView {
+                        VStack {
+                            Spacer()
+                            
+                            VStack(spacing: 5) {
+                                MemorizeImage(.catalog, width: 200)
+                                    .padding(.bottom, 10)
+                                
+                                Text(title)
+                                    .font(.memorizeTitle3)
+                                
+                                Text(message)
+                                    .font(.memorizeCaption)
+                                    .foregroundColor(.secondary)
+                                    .multilineTextAlignment(.center)
+                                
+                                Button(action: { dismiss() }) {
+                                    Label("Go Back", systemImage: "arrow.left")
+                                        .font(.memorizeCaption)
+                                }
+                                .padding(.top, 15)
+                                .tint(.secondary)
+                                .buttonStyle(.bordered)
+                            }
+                            .frame(maxWidth: 200)
+                            .padding(30)
+                            .background(
+                                RoundedRectangle(cornerRadius: 12)
+                                    .fill(.background)
+                                    .shadow(color: .black.opacity(0.3), radius: 8)
+                            )
+                            
+                            Spacer()
+                            
+                            Spacer()
+                        }
+                        .frame(width: geom.size.width, height: geom.size.height)
                     }
-                    .padding(.top, 15)
-                    .tint(.secondary)
-                    .buttonStyle(.bordered)
                 }
-                .frame(maxWidth: 200)
-                .padding(30)
-                .background(
-                    RoundedRectangle(cornerRadius: 12)
-                        .fill(.background)
-                        .shadow(color: .black.opacity(0.3), radius: 8)
-                )
             }
         }
     }

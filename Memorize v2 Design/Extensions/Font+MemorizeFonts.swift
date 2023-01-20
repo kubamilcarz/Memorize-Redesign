@@ -16,12 +16,14 @@ extension Font {
 
     static let memorizeTitle4: Font = .custom("Nunito-SemiBold", size: 19, relativeTo: .title3)
 
-    static let memorizeBody: Font = .custom("Nunito-regular", size: 17, relativeTo: .body)
+    static let memorizeBody: Font = .custom("Nunito-Regular", size: 17, relativeTo: .body)
 
-    static let memorizeBody2: Font = .custom("Nunito-regular", size: 16, relativeTo: .body)
+    static let memorizeBody2: Font = .custom("Nunito-Regular", size: 16, relativeTo: .body)
 
-    static let memorizeCaption: Font = .custom("Nunito-regular", size: 15, relativeTo: .caption)
+    static let memorizeCaption: Font = .custom("Nunito-Regular", size: 15, relativeTo: .caption)
     static let memorizeCaption2: Font = .custom("Nunito-Light", size: 13, relativeTo: .caption2)
+    
+    static let memorizeTabBar: Font = .custom("Nunnito-Regular", size: 11, relativeTo: .caption2).bold()
 }
 
 //extension Font {
