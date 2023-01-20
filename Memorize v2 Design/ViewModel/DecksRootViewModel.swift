@@ -10,10 +10,12 @@ import Foundation
 extension DecksRootView {
     final class ViewModel: ObservableObject {
         
-        @Published var layout: DeckLayout = .grid
+        @Published var layout: DeckLayout = .collectionGrid
         
         @Published var isShowingNewDeckSheet = false
         @Published var editingDeck: Deck?
+        
+        @Published var isShowingNewCardSheet = false
         
         
         func changeLayout(to newLayout: DeckLayout) {

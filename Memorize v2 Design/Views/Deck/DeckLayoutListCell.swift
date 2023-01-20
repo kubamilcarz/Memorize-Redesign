@@ -34,7 +34,6 @@ struct DeckLayoutListCell: View {
                     Text(deck.name)
                         .foregroundStyle(.primary)
                 }
-                .font(.memorizeBody)
                 
                 Spacer()
                 

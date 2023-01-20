@@ -37,7 +37,7 @@ struct DeckSummaryCell: View {
                     }
                 }
                 .lineLimit(1)
-                .font(.memorizeCaption)
+                .font(.caption)
                 
                 Spacer()
                 

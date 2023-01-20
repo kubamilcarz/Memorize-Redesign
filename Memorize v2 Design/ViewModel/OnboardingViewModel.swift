@@ -9,7 +9,7 @@ import SwiftUI
 
 extension OnboardingRootView {
     final class ViewModel: ObservableObject {
-        @Published var currentPhase: OnboardingPhase = .tour
+        @Published var currentPhase: OnboardingPhase = .start
         @Published var currentTourPage: OnboardingTourPhase = .one
 
         let avatars = ["user1", "user2", "user3", "user4", "user5", "user6", "user7", "user8"]

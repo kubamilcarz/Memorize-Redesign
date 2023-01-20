@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C881C8DA2979E7F200591C74 /* CollectionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C881C8D92979E7F200591C74 /* CollectionDetailView.swift */; };
+		C881C8DD2979F2A300591C74 /* NewCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C881C8DC2979F2A300591C74 /* NewCardView.swift */; };
+		C881C8DF297A9B9E00591C74 /* NewCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C881C8DE297A9B9E00591C74 /* NewCardViewModel.swift */; };
+		C881C8E2297A9E5A00591C74 /* Canvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = C881C8E1297A9E5A00591C74 /* Canvas.swift */; };
+		C881C8E4297A9E7400591C74 /* DrawingCanvasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C881C8E3297A9E7400591C74 /* DrawingCanvasViewController.swift */; };
+		C881C8E6297A9E8A00591C74 /* DrawingCanvasViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C881C8E5297A9E8A00591C74 /* DrawingCanvasViewController+Extension.swift */; };
+		C881C8E8297A9EB600591C74 /* UIDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = C881C8E7297A9EB600591C74 /* UIDevice.swift */; };
+		C881C8EA297A9EC800591C74 /* ShakeGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = C881C8E9297A9EC800591C74 /* ShakeGesture.swift */; };
+		C881C8EC297AA28800591C74 /* DisableScrolling.swift in Sources */ = {isa = PBXBuildFile; fileRef = C881C8EB297AA28800591C74 /* DisableScrolling.swift */; };
+		C881C8EE297AA42300591C74 /* NotFoundOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = C881C8ED297AA42300591C74 /* NotFoundOverlay.swift */; };
+		C88E5EE92976BD2B00D82A36 /* MemorizeTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88E5EE82976BD2B00D82A36 /* MemorizeTextFieldStyle.swift */; };
 		C8DB5D492971779600BD6802 /* MemorizeCapsuleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DB5D482971779600BD6802 /* MemorizeCapsuleButton.swift */; };
 		C8DB5D4B2971788800BD6802 /* DeckSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DB5D4A2971788800BD6802 /* DeckSummaryCell.swift */; };
 		C8DB5D4D29717BD800BD6802 /* DeckSummaryCircularStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DB5D4C29717BD800BD6802 /* DeckSummaryCircularStats.swift */; };
@@ -71,6 +82,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C881C8D92979E7F200591C74 /* CollectionDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionDetailView.swift; sourceTree = "<group>"; };
+		C881C8DC2979F2A300591C74 /* NewCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCardView.swift; sourceTree = "<group>"; };
+		C881C8DE297A9B9E00591C74 /* NewCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCardViewModel.swift; sourceTree = "<group>"; };
+		C881C8E1297A9E5A00591C74 /* Canvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Canvas.swift; sourceTree = "<group>"; };
+		C881C8E3297A9E7400591C74 /* DrawingCanvasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingCanvasViewController.swift; sourceTree = "<group>"; };
+		C881C8E5297A9E8A00591C74 /* DrawingCanvasViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DrawingCanvasViewController+Extension.swift"; sourceTree = "<group>"; };
+		C881C8E7297A9EB600591C74 /* UIDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDevice.swift; sourceTree = "<group>"; };
+		C881C8E9297A9EC800591C74 /* ShakeGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakeGesture.swift; sourceTree = "<group>"; };
+		C881C8EB297AA28800591C74 /* DisableScrolling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisableScrolling.swift; sourceTree = "<group>"; };
+		C881C8ED297AA42300591C74 /* NotFoundOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotFoundOverlay.swift; sourceTree = "<group>"; };
+		C88E5EE82976BD2B00D82A36 /* MemorizeTextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemorizeTextFieldStyle.swift; sourceTree = "<group>"; };
 		C8DB5D482971779600BD6802 /* MemorizeCapsuleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemorizeCapsuleButton.swift; sourceTree = "<group>"; };
 		C8DB5D4A2971788800BD6802 /* DeckSummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckSummaryCell.swift; sourceTree = "<group>"; };
 		C8DB5D4C29717BD800BD6802 /* DeckSummaryCircularStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckSummaryCircularStats.swift; sourceTree = "<group>"; };
@@ -147,6 +169,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C881C8DB2979F29900591C74 /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				C881C8DC2979F2A300591C74 /* NewCardView.swift */,
+			);
+			path = Card;
+			sourceTree = "<group>";
+		};
+		C881C8E0297A9E4300591C74 /* Drawing */ = {
+			isa = PBXGroup;
+			children = (
+				C881C8E1297A9E5A00591C74 /* Canvas.swift */,
+				C881C8E3297A9E7400591C74 /* DrawingCanvasViewController.swift */,
+				C881C8E5297A9E8A00591C74 /* DrawingCanvasViewController+Extension.swift */,
+			);
+			path = Drawing;
+			sourceTree = "<group>";
+		};
 		C8E04FE0296EDCB5005DA8E4 = {
 			isa = PBXGroup;
 			children = (
@@ -209,6 +249,8 @@
 				C8DB5D482971779600BD6802 /* MemorizeCapsuleButton.swift */,
 				C8E0501E296EE5C7005DA8E4 /* MemorizeImage.swift */,
 				C8E05052296EF199005DA8E4 /* MemorizeAvatar.swift */,
+				C881C8EB297AA28800591C74 /* DisableScrolling.swift */,
+				C881C8ED297AA42300591C74 /* NotFoundOverlay.swift */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -220,6 +262,9 @@
 				C8E05042296EE94B005DA8E4 /* Font+MemorizeFonts.swift */,
 				C8E05057296EF7FB005DA8E4 /* View+Hide.swift */,
 				C8E0506A29702888005DA8E4 /* Color+MemorizeColors.swift */,
+				C88E5EE82976BD2B00D82A36 /* MemorizeTextFieldStyle.swift */,
+				C881C8E7297A9EB600591C74 /* UIDevice.swift */,
+				C881C8E9297A9EC800591C74 /* ShakeGesture.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -227,6 +272,7 @@
 		C8E04FFD296EDCE2005DA8E4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C881C8E0297A9E4300591C74 /* Drawing */,
 				C8E05001296EDD2B005DA8E4 /* MemorizeTab.swift */,
 				C8E05046296EEBA5005DA8E4 /* OnboardingPhase.swift */,
 				C8E0505B296F39B8005DA8E4 /* TourCell.swift */,
@@ -244,6 +290,7 @@
 				C8E04FFF296EDCFC005DA8E4 /* ContentViewViewModel.swift */,
 				C8E05050296EF0A7005DA8E4 /* OnboardingViewModel.swift */,
 				C8E0506E29702B2C005DA8E4 /* DecksRootViewModel.swift */,
+				C881C8DE297A9B9E00591C74 /* NewCardViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -251,6 +298,7 @@
 		C8E05003296EDDFC005DA8E4 /* Decks */ = {
 			isa = PBXGroup;
 			children = (
+				C881C8D92979E7F200591C74 /* CollectionDetailView.swift */,
 				C8E0500D296EDE5A005DA8E4 /* DecksRootView.swift */,
 				C8E0507629716616005DA8E4 /* DeckDetailView.swift */,
 				C8DB5D522972BAC100BD6802 /* NewDeckSheet.swift */,
@@ -286,6 +334,7 @@
 		C8E05007296EDE18005DA8E4 /* Pages */ = {
 			isa = PBXGroup;
 			children = (
+				C881C8DB2979F29900591C74 /* Card */,
 				C8E05003296EDDFC005DA8E4 /* Decks */,
 				C8E05004296EDE09005DA8E4 /* Browse */,
 				C8E05008296EDE21005DA8E4 /* Review */,
@@ -454,9 +503,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C8E05069297023F3005DA8E4 /* DeckCell.swift in Sources */,
+				C881C8EC297AA28800591C74 /* DisableScrolling.swift in Sources */,
+				C881C8DF297A9B9E00591C74 /* NewCardViewModel.swift in Sources */,
 				C8E05012296EDE6A005DA8E4 /* SettingsRootView.swift in Sources */,
 				C8E05019296EDF43005DA8E4 /* WithFloatingActionButtons.swift in Sources */,
 				C8E0501D296EE4B5005DA8E4 /* MemorizeGraphics.swift in Sources */,
+				C881C8E8297A9EB600591C74 /* UIDevice.swift in Sources */,
+				C881C8E6297A9E8A00591C74 /* DrawingCanvasViewController+Extension.swift in Sources */,
 				C8E0507729716616005DA8E4 /* DeckDetailView.swift in Sources */,
 				C8E0506B29702888005DA8E4 /* Color+MemorizeColors.swift in Sources */,
 				C8E04FEF296EDCB5005DA8E4 /* ContentView.swift in Sources */,
@@ -464,8 +517,12 @@
 				C8E0507329707B47005DA8E4 /* DeckLayoutListCell.swift in Sources */,
 				C8E05014296EDE7D005DA8E4 /* QuickReviewRootView.swift in Sources */,
 				C8E05053296EF199005DA8E4 /* MemorizeAvatar.swift in Sources */,
+				C881C8EE297AA42300591C74 /* NotFoundOverlay.swift in Sources */,
+				C881C8EA297A9EC800591C74 /* ShakeGesture.swift in Sources */,
 				C8E050652970213F005DA8E4 /* Card.swift in Sources */,
+				C881C8E2297A9E5A00591C74 /* Canvas.swift in Sources */,
 				C8E05063297020F0005DA8E4 /* Deck.swift in Sources */,
+				C881C8E4297A9E7400591C74 /* DrawingCanvasViewController.swift in Sources */,
 				C8DB5D4D29717BD800BD6802 /* DeckSummaryCircularStats.swift in Sources */,
 				C8E05043296EE94B005DA8E4 /* Font+MemorizeFonts.swift in Sources */,
 				C8E0507129703220005DA8E4 /* DeckLayoutCollectionGrid.swift in Sources */,
@@ -486,14 +543,17 @@
 				C8E0504F296EECC5005DA8E4 /* OnboardingSummaryView.swift in Sources */,
 				C8E05002296EDD2B005DA8E4 /* MemorizeTab.swift in Sources */,
 				C8E0505A296F3995005DA8E4 /* OnboardingTourCell.swift in Sources */,
+				C88E5EE92976BD2B00D82A36 /* MemorizeTextFieldStyle.swift in Sources */,
 				C8E0501B296EE1A9005DA8E4 /* MemorizeBigButton.swift in Sources */,
 				C8E0504B296EECA8005DA8E4 /* OnboardingAskForTourView.swift in Sources */,
 				C8E05045296EEB4F005DA8E4 /* OnboardingHelloView.swift in Sources */,
+				C881C8DA2979E7F200591C74 /* CollectionDetailView.swift in Sources */,
 				C8E050672970218E005DA8E4 /* DeckGroup.swift in Sources */,
 				C8E0506F29702B2C005DA8E4 /* DecksRootViewModel.swift in Sources */,
 				C8E05051296EF0A7005DA8E4 /* OnboardingViewModel.swift in Sources */,
 				C8DB5D4F2971822400BD6802 /* CardsList.swift in Sources */,
 				C8E0506D29702AF7005DA8E4 /* DeckLayout.swift in Sources */,
+				C881C8DD2979F2A300591C74 /* NewCardView.swift in Sources */,
 				C8E05049296EEC9A005DA8E4 /* OnboardingIntroductionView.swift in Sources */,
 				C8E0505C296F39B8005DA8E4 /* TourCell.swift in Sources */,
 				C8E05060296F4CF6005DA8E4 /* ProfileSheet.swift in Sources */,

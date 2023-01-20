@@ -25,10 +25,10 @@ struct DecksRootView: View {
                                 .foregroundStyle(.secondary)
                             
                             Button {
-                                
+                                vm.isShowingNewDeckSheet = true
                             } label: {
-                                Label("New Deck", systemImage: "plus.circle")
-                                    .padding(5)
+                                Text("New Deck")
+                                    .padding(.horizontal, 7)
                             }
                             .buttonStyle(.borderedProminent)
                         }

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct DeckDetailView: View {
+    @EnvironmentObject var vm: DecksRootView.ViewModel
     
     var deck: Deck
     
@@ -39,7 +40,7 @@ struct DeckDetailView: View {
                             Spacer()
                             
                             HStack(spacing: 10) {
-                                Button { } label: {
+                                Button { vm.isShowingNewCardSheet = true } label: {
                                     Image(systemName: "plus.circle")
                                 }
                                 
@@ -63,12 +64,18 @@ struct DeckDetailView: View {
             .padding(.bottom, 50)
             
         }
+        .notFoundOverlay(isActive: true, for: .deck)
+        
+        .sheet(isPresented: $vm.isShowingNewCardSheet) {
+            NewCardView(deck: deck, isNested: false)
+        }
+        
         .navigationTitle(deck.name)
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
             ToolbarItemGroup(placement: .navigationBarTrailing) {
                 Button {
-                    
+                    vm.isShowingNewCardSheet = true
                 } label: {
                     Label("New Card", systemImage: "plus.circle")
                 }

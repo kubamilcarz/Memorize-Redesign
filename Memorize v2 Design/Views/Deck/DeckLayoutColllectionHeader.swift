@@ -18,12 +18,17 @@ struct DeckLayoutColllectionHeader: View {
     var body: some View {
         VStack(spacing: 0) {
             HStack {
-                HStack {
-                    Image(systemName: collection.icon)
-                        .foregroundColor(collection.color)
-                    Text(collection.name)
-                        .lineLimit(1)
+                NavigationLink {
+                    CollectionDetailView(collection: collection)
+                } label: {
+                    HStack {
+                        Image(systemName: collection.icon)
+                            .foregroundColor(collection.color)
+                        Text(collection.name)
+                            .lineLimit(1)
+                    }
                 }
+                .buttonStyle(.plain)
                 .font(.memorizeBody)
                 
                 Spacer()
@@ -32,7 +37,11 @@ struct DeckLayoutColllectionHeader: View {
                     MemorizeCapsuleButton("Study All") { }
                     
                     Menu {
-                        
+                        Button {
+                            
+                        } label: {
+                            Label("Edit", systemImage: "pencil.circle")
+                        }
                     } label: {
                         Image(systemName: "ellipsis.circle")
                     }

@@ -37,12 +37,21 @@ struct MemorizeBigButton: View {
         } label: {
             Group {
                 ZStack {
+                    if role != .quaternary {
+                        Rectangle()
+                            .fill(.background)
+                            .frame(maxHeight: 60)
+                    }
+                    
                     if role == .primary {
                         LinearGradient(colors: [.accentColor, .accentColor.opacity(0.8)], startPoint: .topLeading, endPoint: .bottomTrailing)
+                            .frame(maxHeight: 60)
                     } else if role == .secondary {
                         LinearGradient(colors: [.secondary, .secondary.opacity(0.7)], startPoint: .topLeading, endPoint: .bottomTrailing)
+                            .frame(maxHeight: 60)
                     } else if role == .tertiary {
                         LinearGradient(colors: [.secondary.opacity(0.8), .secondary.opacity(0.7)], startPoint: .topLeading, endPoint: .bottomTrailing)
+                            .frame(maxHeight: 60)
                     }
                     
                     if role == .quaternary {

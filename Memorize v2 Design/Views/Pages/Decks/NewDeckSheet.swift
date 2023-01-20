@@ -10,6 +10,10 @@ import SwiftUI
 struct NewDeckSheet: View {
     @Environment(\.dismiss) var dismiss
     
+    let colors: [[Color?]] = [[.memorizeRed, .memorizeOrange, .memorizeYellow, .memorizeGreen, .memorizeMint, .memorizeBlue, .memorizeNavy], [.memorizePurple, .memorizePink, .memorizeGray, nil, nil, nil, nil]]
+    
+    let icons = ["checkmark", "book", "house", "car", "person", "sunrise", "shuffle", "cloud.rain", "figure.walk", "flashlight.off.fill", "dial.high", "lightbulb.led", "spigot", "key", "digitalcrown.arrow.clockwise", "oilcan", "syringe"]
+    
     var isEdit: Bool
     var deck: Deck?
     
@@ -18,26 +22,131 @@ struct NewDeckSheet: View {
         self.deck = deck
     }
     
-    @State private var title = "New Deck"
+    @State private var title = ""
     @State private var description = ""
-    @State private var icon = "house"
-    @State private var color = Color.memorizeBlue
+    @State private var pickedIcon = "house"
+    @State private var pickedColor = Color.memorizeBlue
+    
+    var formDisabled: Bool {
+        title.count < 2 || pickedIcon.isEmpty
+    }
     
     var body: some View {
         NavigationView {
             ScrollView {
-                VStack {
+                VStack(spacing: 30) {
                     Group {
                         if let deck {
                             DeckCell(for: deck)
                         } else {
-                            DeckCell(withTitle: title, icon: icon, color: color)
+                            DeckCell(withTitle: title, icon: pickedIcon, color: pickedColor)
                         }
                     }
-                    .frame(maxWidth: 110)
-                    .padding(.vertical)
+                    .frame(maxWidth: 120)
+                    .padding(.top)
+                    
+                    VStack(spacing: 30) {
+                        TextField("Name", text: $title)
+                            .textFieldStyle(MemorizeTextFieldStyle("Title"))
+                        
+                        TextField("Description", text: $description)
+                            .textFieldStyle(MemorizeTextFieldStyle("Description"))
+                    }
+                    .padding(.horizontal)
+                    
+                    Divider()
+                    
+                    VStack(spacing: 15) {
+                        HStack {
+                            Text("Color").font(.memorizeTitle4)
+                            
+                            Spacer()
+                        }
+                        
+                        VStack(spacing: 15) {
+                            ForEach(colors, id: \.self) { row in
+                                HStack(spacing: 15) {
+                                    ForEach(row, id: \.self) { color in
+                                        if let color {
+                                            ZStack {
+                                                Circle()
+                                                    .fill(color.opacity(0.75))
+                                                
+                                                if pickedColor == color {
+                                                    Image(systemName: "checkmark")
+                                                        .foregroundStyle(.white.opacity(0.85))
+                                                        .font(.headline)
+                                                }
+                                            }
+                                            .onTapGesture {
+                                                withAnimation {
+                                                    pickedColor = color
+                                                }
+                                            }
+                                        } else {
+                                            Circle().fill(.clear)
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .padding(.horizontal)
+                    
+                    VStack(spacing: 15) {
+                        HStack {
+                            Text("Icon").font(.memorizeTitle4)
+                            
+                            Spacer()
+                        }
+                        .padding(.horizontal, 7.5)
+                        
+                        ScrollView(.vertical) {
+                            VStack(spacing: 15) {
+                                LazyVGrid(columns: [
+                                    GridItem(.flexible()),
+                                    GridItem(.flexible()),
+                                    GridItem(.flexible()),
+                                    GridItem(.flexible()),
+                                    GridItem(.flexible()),
+                                    GridItem(.flexible()),
+                                    GridItem(.flexible())
+                                ], spacing: 15) {
+                                    ForEach(icons, id: \.self) { icon in
+                                        ZStack {
+                                            Circle().fill(.ultraThinMaterial)
+                                                .overlay(
+                                                    pickedIcon == icon ?
+                                                    Circle().stroke(Color.memorizeBlue, lineWidth: 1)
+                                                        .padding(1)
+                                                    : nil
+                                                )
+                                            
+                                            Image(systemName: icon)
+                                                .foregroundStyle(pickedIcon != icon ? Color.secondary : .memorizeBlue)
+                                        }
+                                        .onTapGesture {
+                                            withAnimation {
+                                                pickedIcon = icon
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .padding(.horizontal, 7.5)
+                        }
+                        .frame(maxHeight: 170)
+                    }
+                    .padding(.horizontal, 7.5)
                 }
+                .padding(.bottom, 75)
             }
+            .withFloatingActionButtons {
+                MemorizeBigButton("Add") { }
+                    .padding(.horizontal)
+                    .disabled(formDisabled)
+            }
+            
             .navigationTitle(isEdit ? title : "New Deck")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {

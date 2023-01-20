@@ -61,8 +61,12 @@ struct DecksLayoutList: View {
                     VStack(spacing: 10) {
                         DeckLayoutColllectionHeader(for: collection)
                         
-                        DeckLayoutCollectionGrid(for: collection)
-                            .padding([.horizontal, .bottom], 10)
+                        NavigationLink {
+                            CollectionDetailView(collection: collection)
+                        } label: {
+                            DeckLayoutCollectionGrid(for: collection)
+                        }
+                        .padding([.horizontal, .bottom], 10)
                     }
                     .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 12))
                 }

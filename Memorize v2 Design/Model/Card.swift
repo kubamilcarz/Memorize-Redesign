@@ -7,7 +7,11 @@
 
 import SwiftUI
 
-struct Card: Identifiable {
+struct Card: Identifiable, Hashable {
+    static func == (lhs: Card, rhs: Card) -> Bool {
+        lhs.id == rhs.id
+    }
+    
     var id = UUID()
     var front: String
     var back: String

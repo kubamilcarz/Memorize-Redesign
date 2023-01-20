@@ -16,4 +16,5 @@ enum MemorizeGraphics: String {
     case podiumFirstCup
     case superhumansFlyingUp
     case typewriter
+    case catalog
 }
