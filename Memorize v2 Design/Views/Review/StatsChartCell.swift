@@ -49,11 +49,11 @@ struct StatsChartCell: View {
                 Group {
                     if negative == numberOfReviews {
                         ZStack(alignment: .top) {
-                            barFor(negative, color: .red)
+                            barFor(negative, color: .memorizeRed)
                         }
                     } else {
                         VStack {
-                            barFor(negative, color: .red)
+                            barFor(negative, color: .memorizeRed)
                         }
                     }
                 }
@@ -62,11 +62,11 @@ struct StatsChartCell: View {
                 Group {
                     if positive == numberOfReviews {
                         ZStack(alignment: .top) {
-                            barFor(positive, color: .green)
+                            barFor(positive, color: .memorizeGreen)
                         }
                     } else {
                         VStack {
-                            barFor(positive, color: .green)
+                            barFor(positive, color: .memorizeGreen)
                         }
                     }
                 }
@@ -100,12 +100,12 @@ struct StatsChartCell: View {
             
             VStack {
                 Rectangle()
-                    .fill(color.opacity(0.7))
+                    .fill(LinearGradient(colors: [color.opacity(0.7), color.opacity(0.6)], startPoint: .bottom, endPoint: .top))
                     .frame(maxWidth: .infinity)
                     .frame(height: heightOfBar)
                     .cornerRadius(height <= 150 ? 6 : 12, corners: [.topLeft, .topRight])
                 
-                Text(color == .green ? "Correct" : color == .red ? "Wrong" : "Unknown")
+                Text(color == .memorizeGreen ? "Correct" : color == .memorizeRed ? "Wrong" : "Unknown")
                     .fixedSize()
                     .font(height <= 150 ? .memorizeTabBar : .memorizeCaption2)
                     .fontWeight(height <= 150 ? .light : .regular)

@@ -64,7 +64,9 @@ struct NewCardView: View {
                 }
                 .padding(.horizontal)
                 
-                Divider()
+                if isDetail == nil {
+                    Divider()
+                }
                                 
                 VStack(spacing: 15) {
                     VStack {

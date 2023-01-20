@@ -13,9 +13,7 @@ struct CardDetailView: View {
     
     var body: some View {
         ScrollView {
-            VStack(spacing: 15) {
-                // Stats View
-                
+            VStack(spacing: 30) {
                 VStack(spacing: 15) {
                     HStack {
                         VStack(alignment: .leading) {
@@ -69,34 +67,36 @@ struct CardDetailView: View {
                 
                 NewCardView(card: card, isDetail: true)
                 
-                Divider()
-                    .padding(.vertical, 15)
-                
-                HStack {
+                VStack(spacing: 15) {
+                    Divider()
+                        .padding(.bottom, 15)
                     
-                    Spacer()
-                    
-                    HStack(spacing: 15) {
-                        Button(role: .destructive) {
-                            
-                        } label: {
-                            Label("Remove Card", systemImage: "trash.circle")
-                        }
-                        .tint(.red)
+                    HStack {
                         
-                        Divider()
+                        Spacer()
                         
-                        Button {
+                        HStack(spacing: 15) {
+                            Button(role: .destructive) {
+                                
+                            } label: {
+                                Label("Remove Card", systemImage: "trash.circle")
+                            }
+                            .tint(.red)
                             
-                        } label: {
-                            Label("Reset Stats", systemImage: "chart.line.uptrend.xyaxis.circle")
+                            Divider()
+                            
+                            Button {
+                                
+                            } label: {
+                                Label("Reset Stats", systemImage: "chart.line.uptrend.xyaxis.circle")
+                            }
+                            .tint(.secondary)
                         }
-                        .tint(.secondary)
+                        .frame(maxHeight: 50)
+                        .font(.memorizeCaption)
                     }
-                    .frame(maxHeight: 50)
-                    .font(.memorizeBody2)
+                    .padding(.horizontal)
                 }
-                .padding(.horizontal)
             }
         }
         .navigationTitle(card.front)

@@ -32,6 +32,7 @@ struct CardPreview: View {
                             .frame(maxWidth: .infinity)
                             .padding(.vertical)
                             .font(.memorizeTitle4)
+                            .foregroundStyle(.white)
                             .background(Color.accentColor, in: RoundedRectangle(cornerRadius: 12))
                     }
                     .buttonStyle(.plain)
