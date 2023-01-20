@@ -74,6 +74,10 @@ extension MemorizeTabBarView {
         .padding(6)
         .background(Material.regular, in: RoundedRectangle(cornerRadius: 12))
         .ignoresSafeArea(edges: .bottom)
+        .overlay(
+            RoundedRectangle(cornerRadius: 14).strokeBorder(.secondary.opacity(0.1), lineWidth: 2)
+                .padding(.horizontal, -2)
+        )
         .offset(x: 0, y: 700 + offset.height + (vm.tabBarCollapseLevel == .high ? 60 : vm.tabBarCollapseLevel == .medium ? 0 : -200))
         .onTapGesture {
             withAnimation(.interpolatingSpring(stiffness: 300, damping: 20)) {
