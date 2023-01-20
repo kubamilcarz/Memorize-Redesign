@@ -23,6 +23,9 @@ struct ContentView: View {
             
             BrowseRootView()
                 .tabBarItem(tab: .browse, selection: $vm.currentTab)
+            
+            SettingsRootView()
+                .tabBarItem(tab: .settings, selection: $vm.currentTab)
         }
         .environmentObject(vm)
     }

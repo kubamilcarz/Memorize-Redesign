@@ -8,13 +8,33 @@
 import SwiftUI
 
 struct BrowseRootView: View {
+    @StateObject var vm: ViewModel
+    
+    init(cards: [Card]? = nil) {
+        if let cards {
+            _vm = StateObject(wrappedValue: ViewModel(cards: cards))
+        } else {
+            // get from fetch request (for now like this)
+            _vm = StateObject(wrappedValue: ViewModel(cards: Card.dummy))
+        }
+    }
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            ScrollView {
+                CardsList(with: vm.cards)
+                    .padding(.bottom, 70)
+
+            }
+            .navigationTitle("Browse")
+
+            .searchable(text: $vm.searchQuery, placement: .navigationBarDrawer(displayMode: .automatic), prompt: Text("Search"))
+        }
     }
 }
 
 struct BrowseRootView_Previews: PreviewProvider {
     static var previews: some View {
-        BrowseRootView()
+        BrowseRootView(cards: Card.dummy)
     }
 }

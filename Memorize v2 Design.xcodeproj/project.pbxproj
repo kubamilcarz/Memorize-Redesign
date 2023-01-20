@@ -21,6 +21,9 @@
 		C881C8F3297AC5FA00591C74 /* MemorizeTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C881C8F2297AC5FA00591C74 /* MemorizeTabBarItem.swift */; };
 		C881C8F5297AC61E00591C74 /* MemorizeTabBarContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C881C8F4297AC61E00591C74 /* MemorizeTabBarContainerView.swift */; };
 		C881C8F7297AC64300591C74 /* MemorizeTabBarPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = C881C8F6297AC64300591C74 /* MemorizeTabBarPreferenceKey.swift */; };
+		C881C8F9297ADA1B00591C74 /* BrowseViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C881C8F8297ADA1B00591C74 /* BrowseViewViewModel.swift */; };
+		C881C8FB297ADE5100591C74 /* CardPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = C881C8FA297ADE5100591C74 /* CardPreview.swift */; };
+		C881C8FD297AE6F700591C74 /* CardDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C881C8FC297AE6F700591C74 /* CardDetailView.swift */; };
 		C88E5EE92976BD2B00D82A36 /* MemorizeTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88E5EE82976BD2B00D82A36 /* MemorizeTextFieldStyle.swift */; };
 		C8DB5D492971779600BD6802 /* MemorizeCapsuleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DB5D482971779600BD6802 /* MemorizeCapsuleButton.swift */; };
 		C8DB5D4B2971788800BD6802 /* DeckSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DB5D4A2971788800BD6802 /* DeckSummaryCell.swift */; };
@@ -99,6 +102,9 @@
 		C881C8F2297AC5FA00591C74 /* MemorizeTabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemorizeTabBarItem.swift; sourceTree = "<group>"; };
 		C881C8F4297AC61E00591C74 /* MemorizeTabBarContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemorizeTabBarContainerView.swift; sourceTree = "<group>"; };
 		C881C8F6297AC64300591C74 /* MemorizeTabBarPreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemorizeTabBarPreferenceKey.swift; sourceTree = "<group>"; };
+		C881C8F8297ADA1B00591C74 /* BrowseViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseViewViewModel.swift; sourceTree = "<group>"; };
+		C881C8FA297ADE5100591C74 /* CardPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardPreview.swift; sourceTree = "<group>"; };
+		C881C8FC297AE6F700591C74 /* CardDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailView.swift; sourceTree = "<group>"; };
 		C88E5EE82976BD2B00D82A36 /* MemorizeTextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemorizeTextFieldStyle.swift; sourceTree = "<group>"; };
 		C8DB5D482971779600BD6802 /* MemorizeCapsuleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemorizeCapsuleButton.swift; sourceTree = "<group>"; };
 		C8DB5D4A2971788800BD6802 /* DeckSummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckSummaryCell.swift; sourceTree = "<group>"; };
@@ -308,6 +314,7 @@
 				C8E05050296EF0A7005DA8E4 /* OnboardingViewModel.swift */,
 				C8E0506E29702B2C005DA8E4 /* DecksRootViewModel.swift */,
 				C881C8DE297A9B9E00591C74 /* NewCardViewModel.swift */,
+				C881C8F8297ADA1B00591C74 /* BrowseViewViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -373,6 +380,8 @@
 			isa = PBXGroup;
 			children = (
 				C8DB5D4E2971822400BD6802 /* CardsList.swift */,
+				C881C8FA297ADE5100591C74 /* CardPreview.swift */,
+				C881C8FC297AE6F700591C74 /* CardDetailView.swift */,
 			);
 			path = Card;
 			sourceTree = "<group>";
@@ -522,6 +531,7 @@
 				C8E05069297023F3005DA8E4 /* DeckCell.swift in Sources */,
 				C881C8EC297AA28800591C74 /* DisableScrolling.swift in Sources */,
 				C881C8DF297A9B9E00591C74 /* NewCardViewModel.swift in Sources */,
+				C881C8FD297AE6F700591C74 /* CardDetailView.swift in Sources */,
 				C8E05012296EDE6A005DA8E4 /* SettingsRootView.swift in Sources */,
 				C8E05019296EDF43005DA8E4 /* WithFloatingActionButtons.swift in Sources */,
 				C8E0501D296EE4B5005DA8E4 /* MemorizeGraphics.swift in Sources */,
@@ -552,10 +562,12 @@
 				C8DB5D4B2971788800BD6802 /* DeckSummaryCell.swift in Sources */,
 				C8E0505E296F46E5005DA8E4 /* DecksLayoutList.swift in Sources */,
 				C8E05000296EDCFC005DA8E4 /* ContentViewViewModel.swift in Sources */,
+				C881C8F9297ADA1B00591C74 /* BrowseViewViewModel.swift in Sources */,
 				C881C8F1297AC5C400591C74 /* MemorizeTabBarView.swift in Sources */,
 				C8E0504D296EECB4005DA8E4 /* OnboardingTourView.swift in Sources */,
 				C8E05017296EDF02005DA8E4 /* OnboardingRootView.swift in Sources */,
 				C8E0500E296EDE5A005DA8E4 /* DecksRootView.swift in Sources */,
+				C881C8FB297ADE5100591C74 /* CardPreview.swift in Sources */,
 				C8E0507929716A13005DA8E4 /* StudySessionModes.swift in Sources */,
 				C8E05010296EDE64005DA8E4 /* BrowseRootView.swift in Sources */,
 				C8E05056296EF5C3005DA8E4 /* OnboardingAvatarPicker.swift in Sources */,

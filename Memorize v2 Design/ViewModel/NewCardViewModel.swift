@@ -52,6 +52,10 @@ extension NewCardView {
             else { focusedField = .front }
         }
         
+        func saveCard(card: Card) {
+            // handle editing of card
+        }
+        
         func updateDrawing() {
             canvasData = canvasView.drawing.dataRepresentation()
         }

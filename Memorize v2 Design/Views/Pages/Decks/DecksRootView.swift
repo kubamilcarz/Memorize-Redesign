@@ -35,6 +35,8 @@ struct DecksRootView: View {
                         .font(.memorizeBody)
                         .padding()
                         .frame(width: geom.size.width, height: geom.size.height)
+                        .padding(.bottom, 70)
+
                     } else {
                         VStack(spacing: 10) {
                             HStack(spacing: 10) {
@@ -46,6 +48,8 @@ struct DecksRootView: View {
                             DecksLayoutList()
                                 .padding(.horizontal)
                         }
+                        .padding(.bottom, 70)
+
                     }
                 }
             }

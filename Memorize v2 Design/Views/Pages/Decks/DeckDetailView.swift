@@ -64,7 +64,7 @@ struct DeckDetailView: View {
             .padding(.bottom, 50)
             
         }
-        .notFoundOverlay(isActive: true, for: .deck)
+        .notFoundOverlay(isActive: false, for: .deck)
         
         .sheet(isPresented: $vm.isShowingNewCardSheet) {
             NewCardView(deck: deck, isNested: false)

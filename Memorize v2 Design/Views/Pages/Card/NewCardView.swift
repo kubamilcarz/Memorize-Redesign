@@ -18,6 +18,7 @@ struct NewCardView: View {
     var card: Card?
     var inEditMode: Bool
     var isNested: Bool
+    var isDetail: Bool?
     
     init(card: Card? = nil, isNested: Bool = true) {
         self.card = card
@@ -29,6 +30,13 @@ struct NewCardView: View {
         self.inEditMode = card != nil
         self.isNested = isNested
         self.deck = deck
+    }
+    
+    init(card: Card? = nil, isDetail: Bool) {
+        self.card = card
+        self.inEditMode = card != nil
+        self.isNested = true
+        self.isDetail = true
     }
 
     var content: some View {
@@ -129,16 +137,28 @@ struct NewCardView: View {
         .navigationTitle(inEditMode ? card?.front ?? "Unknown Card" : "New Card")
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
-            if !isNested {
-                Button("Done") {
-                    dismiss()
+            if isDetail == nil {
+                if !isNested {
+                    Button {
+                        dismiss()
+                    } label: {
+                        Text("Done").font(.memorizeBody)
+                    }
                 }
             }
         }
         .withFloatingActionButtons {
-            MemorizeBigButton("Add", action: vm.addCard)
+            if isDetail == nil {
+                MemorizeBigButton(inEditMode ? "Save" : "Add") {
+                    if inEditMode, let card {
+                        vm.saveCard(card: card)
+                    } else {
+                        vm.addCard()
+                    }
+                }
                 .padding(.horizontal)
                 .disabled(vm.isFormDisabled)
+            }
         }
         
         .onTapGesture {
@@ -148,6 +168,12 @@ struct NewCardView: View {
         .onAppear {
             vm.currentCanvas = Canvas(canvasView: $canvasView, onSaved: vm.updateDrawing, isStatic: false)
             vm.deck = deck
+            
+            if let card {
+                vm.front = card.front
+                vm.back = card.back
+            }
+            
         }
         .onChange(of: vm.currentCanvas.toolPicker.isVisible) { newValue in
             vm.isCanvasToolkitActive = newValue

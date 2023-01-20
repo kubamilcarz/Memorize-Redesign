@@ -9,7 +9,7 @@ import Foundation
 
 extension ContentView {
     final class ViewModel: ObservableObject {
-        @Published var currentTab: MemorizeTabBarItem = .decks
+        @Published var currentTab: MemorizeTabBarItem = .browse
         
         @Published var tabBarCollapseLevel: TabBarCollapseLevel = .medium
         

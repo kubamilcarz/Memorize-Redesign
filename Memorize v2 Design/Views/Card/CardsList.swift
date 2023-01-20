@@ -41,8 +41,47 @@ struct CardsList: View {
             .frame(minHeight: 250)
             .padding(.horizontal)
         } else {
-            Text("cards")
+            VStack(spacing: 0) {
+                ForEach(cards.indices, id: \.self) { index in
+                    NavigationLink {
+                        CardPreview(for: cards[index])
+                    } label: {
+                        cardCell(card: cards[index], index: index)
+                    }
+                    .buttonStyle(.plain)
+                }
+            }
+            .clipShape(RoundedRectangle(cornerRadius: 12))
+            .padding(.horizontal)
         }
+    }
+    
+    private func cardCell(card: Card, index: Int) -> some View {
+        HStack(spacing: 15) {
+            HStack {
+                Text(card.front)
+                    .lineLimit(2)
+                    .truncationMode(.tail)
+                Spacer()
+            }
+            
+            HStack {
+                Text(card.back)
+                    .lineLimit(2)
+                    .truncationMode(.tail)
+                Spacer()
+                
+                Image(systemName: "chevron.right")
+                    .font(.caption)
+            }
+        }
+        .font(.memorizeBody)
+        .padding(.horizontal)
+        .padding(.vertical, 10)
+        .background(
+            Rectangle().fill(.ultraThinMaterial).opacity(index % 2 == 0 ? 1 : 0.1)
+        )
+
     }
 }
 
