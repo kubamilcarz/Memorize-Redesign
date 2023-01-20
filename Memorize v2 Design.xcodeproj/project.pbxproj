@@ -24,6 +24,8 @@
 		C881C8F9297ADA1B00591C74 /* BrowseViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C881C8F8297ADA1B00591C74 /* BrowseViewViewModel.swift */; };
 		C881C8FB297ADE5100591C74 /* CardPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = C881C8FA297ADE5100591C74 /* CardPreview.swift */; };
 		C881C8FD297AE6F700591C74 /* CardDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C881C8FC297AE6F700591C74 /* CardDetailView.swift */; };
+		C881C8FF297AF33200591C74 /* StatsChartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C881C8FE297AF33200591C74 /* StatsChartCell.swift */; };
+		C881C901297AFA2600591C74 /* CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = C881C900297AFA2600591C74 /* CornerRadius.swift */; };
 		C88E5EE92976BD2B00D82A36 /* MemorizeTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C88E5EE82976BD2B00D82A36 /* MemorizeTextFieldStyle.swift */; };
 		C8DB5D492971779600BD6802 /* MemorizeCapsuleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DB5D482971779600BD6802 /* MemorizeCapsuleButton.swift */; };
 		C8DB5D4B2971788800BD6802 /* DeckSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DB5D4A2971788800BD6802 /* DeckSummaryCell.swift */; };
@@ -105,6 +107,8 @@
 		C881C8F8297ADA1B00591C74 /* BrowseViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseViewViewModel.swift; sourceTree = "<group>"; };
 		C881C8FA297ADE5100591C74 /* CardPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardPreview.swift; sourceTree = "<group>"; };
 		C881C8FC297AE6F700591C74 /* CardDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailView.swift; sourceTree = "<group>"; };
+		C881C8FE297AF33200591C74 /* StatsChartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsChartCell.swift; sourceTree = "<group>"; };
+		C881C900297AFA2600591C74 /* CornerRadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerRadius.swift; sourceTree = "<group>"; };
 		C88E5EE82976BD2B00D82A36 /* MemorizeTextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemorizeTextFieldStyle.swift; sourceTree = "<group>"; };
 		C8DB5D482971779600BD6802 /* MemorizeCapsuleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemorizeCapsuleButton.swift; sourceTree = "<group>"; };
 		C8DB5D4A2971788800BD6802 /* DeckSummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckSummaryCell.swift; sourceTree = "<group>"; };
@@ -289,6 +293,7 @@
 				C88E5EE82976BD2B00D82A36 /* MemorizeTextFieldStyle.swift */,
 				C881C8E7297A9EB600591C74 /* UIDevice.swift */,
 				C881C8E9297A9EC800591C74 /* ShakeGesture.swift */,
+				C881C900297AFA2600591C74 /* CornerRadius.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -342,6 +347,7 @@
 			isa = PBXGroup;
 			children = (
 				C8E0507829716A12005DA8E4 /* StudySessionModes.swift */,
+				C881C8FE297AF33200591C74 /* StatsChartCell.swift */,
 			);
 			path = Review;
 			sourceTree = "<group>";
@@ -555,6 +561,7 @@
 				C8DB5D4D29717BD800BD6802 /* DeckSummaryCircularStats.swift in Sources */,
 				C8E05043296EE94B005DA8E4 /* Font+MemorizeFonts.swift in Sources */,
 				C8E0507129703220005DA8E4 /* DeckLayoutCollectionGrid.swift in Sources */,
+				C881C8FF297AF33200591C74 /* StatsChartCell.swift in Sources */,
 				C8E04FED296EDCB5005DA8E4 /* Memorize_v2_DesignApp.swift in Sources */,
 				C8DB5D492971779600BD6802 /* MemorizeCapsuleButton.swift in Sources */,
 				C8E0501F296EE5C7005DA8E4 /* MemorizeImage.swift in Sources */,
@@ -589,6 +596,7 @@
 				C8E05049296EEC9A005DA8E4 /* OnboardingIntroductionView.swift in Sources */,
 				C8E0505C296F39B8005DA8E4 /* TourCell.swift in Sources */,
 				C8E05060296F4CF6005DA8E4 /* ProfileSheet.swift in Sources */,
+				C881C901297AFA2600591C74 /* CornerRadius.swift in Sources */,
 				C8DB5D532972BAC100BD6802 /* NewDeckSheet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

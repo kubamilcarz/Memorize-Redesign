@@ -16,12 +16,54 @@ struct CardDetailView: View {
             VStack(spacing: 15) {
                 // Stats View
                 
-                VStack {
-                    Text("Stats")
-                        .font(.memorizeBody)
-                        .foregroundColor(.secondary)
+                VStack(spacing: 15) {
+                    HStack {
+                        VStack(alignment: .leading) {
+                            Text("Stats")
+                                .font(.memorizeTitle4)
+                            Text("You created this card on \(Date.now.formatted(date: .abbreviated, time: .omitted))")
+                                .font(.memorizeCaption)
+                                .foregroundStyle(.secondary)
+                        }
+                        
+                        Spacer()
+                    }
+                    
+                    HStack(alignment: .center) {
+                        HStack(spacing: 10) {
+                            VStack(alignment: .leading, spacing: 5) {
+                                Text("Accuracy")
+                                Spacer()
+                                Text("Avg Answer")
+                                Spacer()
+                                Text("Last Reviewed")
+                                Spacer()
+                                Text("First Reviewed")
+                            }
+                            .fontWeight(.semibold)
+                            
+                            VStack(alignment: .leading, spacing: 5) {
+                                Text(74.formatted(.percent))
+                                Spacer()
+                                Text("3 s")
+                                Spacer()
+                                Text(Date.now.formatted(date: .abbreviated, time: .omitted))
+                                Spacer()
+                                Text(Date.now.formatted(date: .abbreviated, time: .omitted))
+                            }
+                        }
+                        .lineLimit(1)
+                        .font(.caption)
+                        .padding(.vertical)
+                        .frame(maxHeight: 140)
+                        
+                        Spacer()
+                        
+                        StatsChartCell(card: card, height: 150)
+                            .frame(maxWidth: 120)
+                    }
                 }
-                .frame(height: 200)
+                .padding(.horizontal)
                 
                 Divider()
                 

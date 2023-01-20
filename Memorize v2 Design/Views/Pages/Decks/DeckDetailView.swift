@@ -81,7 +81,7 @@ struct DeckDetailView: View {
                 }
                 
                 Menu {
-                    Button { } label: {
+                    Button { vm.editingDeck = deck } label: {
                         Label("Edit", systemImage: "pencil")
                     }
                     
@@ -131,5 +131,6 @@ struct DeckDetailView: View {
 struct DeckDetailView_Previews: PreviewProvider {
     static var previews: some View {
         DeckDetailView(deck: Deck.dummy[0])
+            .environmentObject(DecksRootView.ViewModel())
     }
 }

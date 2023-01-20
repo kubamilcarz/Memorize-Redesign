@@ -35,15 +35,9 @@ struct NewDeckSheet: View {
         NavigationView {
             ScrollView {
                 VStack(spacing: 30) {
-                    Group {
-                        if let deck {
-                            DeckCell(for: deck)
-                        } else {
-                            DeckCell(withTitle: title, icon: pickedIcon, color: pickedColor)
-                        }
-                    }
-                    .frame(maxWidth: 120)
-                    .padding(.top)
+                    DeckCell(withTitle: title, icon: pickedIcon, color: pickedColor)
+                        .frame(maxWidth: 120)
+                        .padding(.top)
                     
                     VStack(spacing: 30) {
                         TextField("Name", text: $title)
@@ -142,7 +136,7 @@ struct NewDeckSheet: View {
                 .padding(.bottom, 75)
             }
             .withFloatingActionButtons {
-                MemorizeBigButton("Add") { }
+                MemorizeBigButton(isEdit ? "Save" : "Add") { }
                     .padding(.horizontal)
                     .disabled(formDisabled)
             }
@@ -151,6 +145,15 @@ struct NewDeckSheet: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 Button("Done") { dismiss() }
+            }
+            
+            .onAppear {
+                if let deck {
+                    title = deck.name
+                    description = deck.description
+                    pickedColor = deck.color
+                    pickedIcon = deck.icon
+                }
             }
         }
     }
